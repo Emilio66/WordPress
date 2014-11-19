@@ -1021,7 +1021,7 @@ function wp_import_upload_form($action) {
 		<strong><?php echo $upload_dir['error']; ?></strong>
 	</p>
 </div>
-	 <?phpelse :
+	 <?php else :
 		?>
 <form enctype="multipart/form-data" id="import-upload-form"
 	method="post" class="wp-upload-form"

@@ -472,7 +472,7 @@ foreach ( $root->children as $group ) {
 			<?php
 				endif;
 			?>>
-		 <?phpelse :
+		 <?php else :
 			?><div class="ab-item ab-empty-item"
 			<?php
 			
@@ -490,7 +490,7 @@ echo $aria_attributes;
 		
 		if ($has_link) :
 			?></a>
-		 <?phpelse :
+		 <?php else :
 			?></div>
 		<?php endif;
 		

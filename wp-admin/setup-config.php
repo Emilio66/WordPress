@@ -345,7 +345,7 @@ el.select();
 })();
 </script>
 
-		 <?phpelse :
+		 <?php else :
 			/*
 			 * If this file doesn't exist, then we are using the wp-config-sample.php
 			 * file one level up, which is for the develop repo.

@@ -632,7 +632,7 @@ printf( /* translators: 1: comment author, 2: post link, 3: notification if the 
 			</h4>
 
 			
-	 <?phpelse :
+	 <?php else :
 		switch ($comment->comment_type) {
 			case 'pingback' :
 				$type = __ ( 'Pingback' );
