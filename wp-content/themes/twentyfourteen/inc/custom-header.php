@@ -65,8 +65,7 @@ if (! function_exists ( 'twentyfourteen_header_style' )) :
 			// If we get this far, we have custom styles.
 		?>
 <style type="text/css" id="twentyfourteen-header-css">
-<?
-php // Has the text been hidden ?
+<?php // Has the text been hidden ?
 		
 		if (! display_header_text ()) :
 			?> .site-title,.site-description {
@@ -75,13 +74,12 @@ php // Has the text been hidden ?
 	position: absolute;
 }
 
-<?
-			php
+<?php
 		 // If the user has set a custom color for the text,use that .
 elseif ($text_color != get_theme_support ( 'custom-header ', 'default-text-color
 	' )) :
 			?> .site-title a {
-	color: #<?php echo esc_attr($ text_color)
+	color: #<?php echo esc_attr($text_color)
 			;
 			?>;
 }

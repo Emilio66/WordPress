@@ -37,7 +37,11 @@ if ($wl_theme_options ['footer_customizations']) {
 			}
 			?>
 			<a target="_blank" rel="nofollow"
-					href="<?php if($wl_theme_options['developed_by_link']) { echo esc_url($wl_theme_options['developed_by_link']); } ?>"><?php if($wl_theme_options['developed_by_weblizar_text']) { echo esc_attr($wl_theme_options['developed_by_weblizar_text']); } ?></a>
+					href="<?php if($wl_theme_options['developed_by_link']) {
+						echo esc_url($wl_theme_options['developed_by_link']); } ?>">
+						<?php if($wl_theme_options['developed_by_weblizar_text']) { 
+							echo esc_attr($wl_theme_options['developed_by_weblizar_text']); } ?>
+			</a>
 			</p>
 			
 			
@@ -72,8 +76,7 @@ if ($wl_theme_options ['footer_customizations']) {
 	</div>		
 		<?php if($wl_theme_options['custom_css']) ?>
 		<style type="text/css">
-<?
-php 		{
+<?php 	{
 			echo esc_attr ( $wl_theme_options ['custom_css'] );
 		}
 		?>
@@ -83,6 +86,7 @@ php 		{
 </div>
 <a href="#" title="Go Top" class="enigma_scrollup"
 	style="display: inline;"><i class="fa fa-chevron-up"></i></a>
-<?php wp_footer(); ?>
+<?php
+wp_footer(); ?>
 </body>
 </html>

@@ -2794,6 +2794,7 @@ function get_home_url($blog_id = null, $path = '', $scheme = null) {
 	 * @param int|null $blog_id
 	 *        	Blog ID, or null for the current blog.
 	 */
+	//return "192.168.1.15";
 	return apply_filters ( 'home_url', $url, $path, $orig_scheme, $blog_id );
 }
 

@@ -77,8 +77,7 @@ function twentytwelve_header_style() {
 		// If we get this far, we have custom styles.
 	?>
 <style type="text/css" id="twentytwelve-header-css">
-<?
-php // Has the text been hidden ?
+<?php // Has the text been hidden ?
 		
 	if (! display_header_text ()) :
 		?> .site-title,.site-description {
@@ -87,8 +86,7 @@ php // Has the text been hidden ?
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-<?
-		php
+<?php
 	  // If the user has set a custom color for the text,use that .
 else :
 		?> .site-header h1 a,.site-header h2 {

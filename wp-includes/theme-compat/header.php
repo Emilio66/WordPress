@@ -24,8 +24,7 @@ _deprecated_file ( sprintf ( __ ( 'Theme without %1$s' ), basename ( __FILE__ ) 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <style type="text/css" media="screen">
-<?
-php // Checks to see whether it needs a sidebar
+<?php // Checks to see whether it needs a sidebar
 if (empty ( $withcomments ) && ! is_single ()) {
 	?> #page {
 	background:
@@ -34,13 +33,11 @@ if (empty ( $withcomments ) && ! is_single ()) {
 	border: none;
 }
 
-<?
-	php
+<?php
 } else { // No sidebar	?> #page { background:url("<?php bloginfo('stylesheet_directory'); ?>/images/kubrickbgwide.jpg")repeat-ytop;
 	border: none;
 }
-<?
-	php
+<?php
 }
 ?>
 </style>

@@ -12,7 +12,7 @@
  *
  * @package WordPress
  */
-
+ 
 // ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
 /**
  * WordPress 数据库的名称
@@ -90,7 +90,7 @@ define ( 'WPLANG', 'zh_CN' );
  * 将这个值改为“true”，WordPress 将显示所有用于开发的提示。
  * 强烈建议插件开发者在开发环境中启用本功能。
  */
-define ( 'WP_DEBUG', false );
+define ( 'WP_DEBUG', true );
 
 /* 好了！请不要再继续编辑。请保存本文件。使用愉快！ */
 

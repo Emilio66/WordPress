@@ -3886,7 +3886,7 @@ msgid "mail@me.com"
 msgstr ""
 
 #: ../weblizar-pro/functions/custom/wl-footer-contact-widgets.php:44
-msgid "info@weblizar.com"
+msgid "info@movie20.com"
 msgstr ""
 
 #: ../weblizar-pro/functions/custom/wl-footer-contact-widgets.php:45
@@ -3895,7 +3895,7 @@ msgstr ""
 
 #: ../weblizar-pro/functions/custom/wl-footer-contact-widgets.php:45
 #: ../weblizar-pro/functions/custom/wl-footer-contact-widgets.php:69
-msgid "weblizar.com"
+msgid "movie20.com"
 msgstr ""
 
 #: ../weblizar-pro/functions/custom/wl-footer-contact-widgets.php:60

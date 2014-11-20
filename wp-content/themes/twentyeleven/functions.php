@@ -262,18 +262,16 @@ if (! function_exists ( 'twentyeleven_header_style' )) :
 			// If we get this far, we have custom styles. Let's do this.
 		?>
 <style type="text/css" id="twentyeleven-header-css">
-<?
-php // Has the text been hidden ?
-		
-		if ('blank ' == $text_color) :
+<?php 
+		// Has the text been hidden ?
+	if ('blank ' == $text_color) :
 			?> #site-title,#site-description {
 	position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-<?
-			php
+<?php
 		  // If the user has set a custom color for the text use that
 else :
 			?> #site-title a,#site-description {
@@ -284,13 +282,10 @@ echo $text_color;
 	!
 	important;
 }
-<?
-			php
+<?php	
+	endif;
 		
-
-		endif;
-		
-		?>
+?>
 </style>
 <?php
 	}
@@ -333,8 +328,7 @@ if (! function_exists ( 'twentyeleven_admin_header_style' )) :
 	padding: 0 0 3em;
 }
 
-<?
-php // If the user has set a custom color for the text use that
+<?php // If the user has set a custom color for the text use that
 		
 		if (get_header_textcolor () != HEADER_TEXTCOLOR) :
 			?> #site-title a,#site-description {
@@ -344,10 +338,9 @@ echo get_header_textcolor ();
 			?>;
 }
 
-<?
-			php
+<?php
 		 endif ;
-		?> #headimg img {
+?> #headimg img {
 	max-width: 1000px;
 	height: auto;
 	width: 100%;

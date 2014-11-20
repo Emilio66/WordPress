@@ -95,12 +95,11 @@ function twentythirteen_header_style() {
 		// If we get this far, we have custom styles.
 	?>
 <style type="text/css" id="twentythirteen-header-css">
-<?
-php
+<?php
 		
 	if (! empty ( $header_image )) :
 		?> .site-header {
-	background: url(<? php header_image(); ?>) no-repeat scroll top;
+	background: url(<?php header_image(); ?>) no-repeat scroll top;
 	background-size: 1600px auto;
 }
 
@@ -116,8 +115,7 @@ php
 	}
 }
 
-<?
-		php
+<?php
 	
 		endif ; // Has the text been hidden ?
 	if (! display_header_text ()) :
@@ -127,32 +125,26 @@ php
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-<?
-php
+<?php
 			
 		if (empty ( $header_image )) :
 			?> .site-header .home-link {
 	min-height: 0;
 }
 
-<?
-			php
+<?php
 		
-			endif ;
+		endif ;
 	 // If the user has set a custom color for the text,use that .
 elseif ($text_color != get_theme_support ( 'custom-header ', 'default-text-color
 	' )) :
 		?> .site-title,.site-description {
-	color: #<?php echo esc_attr($ text_color)
+	color: #<?php echo esc_attr($text_color)
 		;
 		?>;
 }
-<?
-		php
-	
-
+<?php
 	endif;
-	
 	?>
 </style>
 <?php
@@ -171,7 +163,7 @@ function twentythirteen_admin_header_style() {
 	border: none;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box; <? php 
+	box-sizing: border-box; <?php 
 	if (! empty ( $header_image )) {
 		echo 'background : url(' . esc_url ( $header_image ) . ') no-repeat scroll
 	top;
@@ -196,8 +188,7 @@ px
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: 1040px;
-	<?
-	php
+	<?php
 	
 	if (! empty ( $header_image ) || display_header_text ()) {
 		echo 'min-height
@@ -212,8 +203,7 @@ width
  
 100%;
 }
-<?
-php 
+<?php 
 	if (! display_header_text ()) :
 		?> #headimg h1,#headimg h2 {
 	position: absolute !important;
@@ -221,8 +211,7 @@ php
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-<?
-		php
+<?php
 	 endif ;
 	?> #headimg h1 {
 	font: bold 60px/1 Bitter, Georgia, serif;

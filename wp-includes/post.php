@@ -5460,57 +5460,92 @@ function wp_update_attachment_metadata($post_id, $data) {
  *        	Optional. Attachment ID. Default 0.
  * @return string|bool Attachment URL, otherwise false.
  */
-function wp_get_attachment_url($post_id = 0) {
-	$post_id = ( int ) $post_id;
-	if (! $post = get_post ( $post_id ))
+
+function wp_get_attachment_url( $post_id = 0 ) {
+	$file_dir=dirname(__FILE__);
+	$server_root=$_SERVER[DOCUMENT_ROOT];
+	$file_dir=substr($file_dir,strlen($server_root));
+	$file_dir=substr($file_dir,0,-12);
+	if($file_dir!=''){
+		$file_dir='/'.substr($file_dir,1);
+	}
+
+	$post_id = (int) $post_id;
+	if ( !$post =& get_post( $post_id ) )
 		return false;
-	
-	if ('attachment' != $post->post_type)
-		return false;
-	
 	$url = '';
-	// Get attached file.
-	if ($file = get_post_meta ( $post->ID, '_wp_attached_file', true )) {
-		// Get upload directory.
-		if (($uploads = wp_upload_dir ()) && false === $uploads ['error']) {
-			// Check that the upload base exists in the file location.
-			if (0 === strpos ( $file, $uploads ['basedir'] )) {
-				// Replace file location with url location.
-				$url = str_replace ( $uploads ['basedir'], $uploads ['baseurl'], $file );
-			} elseif (false !== strpos ( $file, 'wp-content/uploads' )) {
-				$url = $uploads ['baseurl'] . substr ( $file, strpos ( $file, 'wp-content/uploads' ) + 18 );
-			} else {
-				// It's a newly-uploaded file, therefore $file is relative to the basedir.
-				$url = $uploads ['baseurl'] . "/$file";
-			}
+	if ( $file = get_post_meta( $post->ID, '_wp_attached_file', true) ) { //Get attached file
+		if ( ($uploads = wp_upload_dir()) && false === $uploads['error'] ) { //Get upload directory
+			if ( 0 === strpos($file, $uploads['basedir']) ) //Check that the upload base exists in the file location
+				//$url = str_replace($uploads['basedir'], $uploads['baseurl'], $file); //replace file location with url location
+				$url=$file_dir."/wp-content/uploads/".$file;
+				elseif ( false !== strpos($file, 'wp-content/uploads') )
+				//$url = $uploads['baseurl'] . substr( $file, strpos($file, ‘wp-content/uploads’) + 18 );
+				$url=$file_dir."/wp-content/uploads/".$file;
+			else
+				//$url = $uploads['baseurl'] . “/$file”; //Its a newly uploaded file, therefor $file is relative to the basedir.
+				$url=$file_dir."/wp-content/uploads/".$file;
 		}
 	}
-	
-	/*
-	 * If any of the above options failed, Fallback on the GUID as used pre-2.7,
-	 * not recommended to rely upon this.
-	 */
-	if (empty ( $url )) {
-		$url = get_the_guid ( $post->ID );
-	}
-	
-	/**
-	 * Filter the attachment URL.
-	 *
-	 * @since 2.1.0
-	 *       
-	 * @param string $url
-	 *        	URL for the given attachment.
-	 * @param int $post_id
-	 *        	Attachment ID.
-	 */
-	$url = apply_filters ( 'wp_get_attachment_url', $url, $post->ID );
-	
-	if (empty ( $url ))
+	if ( empty($url) ) //If any of the above options failed, Fallback on the GUID as used pre-2.7, not recomended to rely upon this.
+		$url = get_the_guid( $post->ID );
+	if ( 'attachment' != $post->post_type || empty($url) )
 		return false;
-	
-	return $url;
+	return apply_filters( 'wp_get_attachment_url', $url, $post->ID );
 }
+
+//original function definition
+// function wp_get_attachment_url($post_id = 0) {
+// 	$post_id = ( int ) $post_id;
+// 	if (! $post = get_post ( $post_id ))
+// 		return false;
+	
+// 	if ('attachment' != $post->post_type)
+// 		return false;
+	
+// 	$url = '';
+// 	// Get attached file.
+// 	if ($file = get_post_meta ( $post->ID, '_wp_attached_file', true )) {
+// 		// Get upload directory.
+// 		if (($uploads = wp_upload_dir ()) && false === $uploads ['error']) {
+// 			// Check that the upload base exists in the file location.
+// 			if (0 === strpos ( $file, $uploads ['basedir'] )) {
+// 				// Replace file location with url location.
+// 				$url = str_replace ( $uploads ['basedir'], $uploads ['baseurl'], $file );
+// 			} elseif (false !== strpos ( $file, 'wp-content/uploads' )) {
+// 				$url = $uploads ['baseurl'] . substr ( $file, strpos ( $file, 'wp-content/uploads' ) + 18 );
+// 			} else {
+// 				// It's a newly-uploaded file, therefore $file is relative to the basedir.
+// 				$url = $uploads ['baseurl'] . "/$file";
+// 			}
+// 		}
+// 	}
+	
+// 	/*
+// 	 * If any of the above options failed, Fallback on the GUID as used pre-2.7,
+// 	 * not recommended to rely upon this.
+// 	 */
+// 	if (empty ( $url )) {
+// 		$url = get_the_guid ( $post->ID );
+// 	}
+	
+// 	/**
+// 	 * Filter the attachment URL.
+// 	 *
+// 	 * @since 2.1.0
+// 	 *       
+// 	 * @param string $url
+// 	 *        	URL for the given attachment.
+// 	 * @param int $post_id
+// 	 *        	Attachment ID.
+// 	 */
+// 	$url = apply_filters ( 'wp_get_attachment_url', $url, $post->ID );
+	
+// 	if (empty ( $url ))
+// 		return false;
+	
+// 	return $url;
+// }
 
 /**
  * Retrieve thumbnail for an attachment.

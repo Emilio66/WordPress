@@ -130,14 +130,14 @@ function wl_reset_footer_customizations_setting() {
 	$wl_theme_options ['footer_customizations'] = "@ 2014 Weblizar Theme";
 	$wl_theme_options ['developed_by_text'] = "Theme Developed By";
 	$wl_theme_options ['developed_by_weblizar_text'] = "Weblizar";
-	$wl_theme_options ['developed_by_link'] = "http://weblizar.com/";
+	$wl_theme_options ['developed_by_link'] = home_url();
 	update_option ( 'enigma_options', $wl_theme_options );
 }
 function wl_reset_footer_footercall_setting() {
 	$wl_theme_options ['blog_title'] = "Latest Blog";
 	$wl_theme_options ['fc_title'] = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ";
 	$wl_theme_options ['fc_btn_txt'] = "Weblizar";
-	$wl_theme_options ['fc_btn_link'] = "http://weblizar.com/";
+	$wl_theme_options ['fc_btn_link'] = home_url();
 	update_option ( 'enigma_options', $wl_theme_options );
 }
 ?>

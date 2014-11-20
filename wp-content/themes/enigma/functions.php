@@ -5,8 +5,8 @@
 /**
  * Includes required resources here*
  */
-define ( 'WL_TEMPLATE_DIR_URI', get_template_directory_uri () );
-define ( 'WL_TEMPLATE_DIR', get_template_directory () );
+define ( 'WL_TEMPLATE_DIR_URI', get_template_directory_uri () );//relative path
+define ( 'WL_TEMPLATE_DIR', get_template_directory () );	//absolute path
 define ( 'WL_TEMPLATE_DIR_CORE', WL_TEMPLATE_DIR . '/core' );
 
 require (WL_TEMPLATE_DIR_CORE . '/menu/wlkr_bootstrap_navwalker.php');
@@ -50,17 +50,49 @@ function my_remove_recent_comments_style() {
 	) );
 }
 
+//remove dashboard widgets
+function example_remove_dashboard_widgets() {
+	// Globalize the metaboxes array, this holds all the widgets for wp-admin
+	global $wp_meta_boxes;
+
+	// 以下这一行代码将删除 "快速发布" 模块
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+
+	// 以下这一行代码将删除 "引入链接" 模块
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+
+	// 以下这一行代码将删除 "插件" 模块
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+
+	// 以下这一行代码将删除 "近期评论" 模块
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+
+	// 以下这一行代码将删除 "近期草稿" 模块
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
+
+	// 以下这一行代码将删除 "WordPress 开发日志" 模块
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+
+	// 以下这一行代码将删除 "其它 WordPress 新闻" 模块
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+
+	// 以下这一行代码将删除 "概况" 模块
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now']);
+}
+add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
+
+
 //remove google fonts
-function coolwp_remove_open_sans_from_wp_core() {
+/*function coolwp_remove_open_sans_from_wp_core() {
 	wp_deregister_style ( 'open-sans' );
 	wp_register_style ( 'open-sans', false );
 	wp_enqueue_style ( 'open-sans', '' );
 }
 add_action ( 'init', 'coolwp_remove_open_sans_from_wp_core' );
-
+*/
 // Sane Defaults
 function weblizar_default_settings() {
-	$ImageUrl = WL_TEMPLATE_DIR_URI . "/images/1.png";
+	$ImageUrl = WL_TEMPLATE_DIR_URI . "/images/1.png"; 
 	$ImageUrl2 = WL_TEMPLATE_DIR_URI . "/images/2.png";
 	$ImageUrl3 = WL_TEMPLATE_DIR_URI . "/images/3.png";
 	$ImageUrl4 = WL_TEMPLATE_DIR_URI . "/images/portfolio1.png";
@@ -84,7 +116,7 @@ function weblizar_default_settings() {
 			'slide_btn_text_1' => 'Read More',
 			'slide_btn_link_1' => '#',
 			'slide_image_2' => $ImageUrl2,
-			'slide_title_2' => 'variations of passages',
+			'slide_title_2' => 'Movie 2.0 来啦！',
 			'slide_desc_2' => 'Contrary to popular belief, Lorem Ipsum is not simply random text',
 			'slide_btn_text_2' => 'Read More',
 			'slide_btn_link_2' => '#',
@@ -98,7 +130,7 @@ function weblizar_default_settings() {
 			'fc_btn_txt' => 'More Features',
 			'fc_btn_link' => '#',
 			
-			// Social media links �ر��罻Ԫ��
+			// Social media links, doesn't need them, turn them off
 			'header_social_media_in_enabled' => 'off',
 			'footer_section_social_media_enbled' => 'off',
 			'twitter_link' => "#",
@@ -106,13 +138,13 @@ function weblizar_default_settings() {
 			'linkedin_link' => "#",
 			'youtube_link' => "#",
 			
-			// ע�͵�������Ϣ
+			//,doesn't need them
 			// 'email_id' => 'enigma@mymail.com',
 			// 'phone_no' => '0159753586',
-			'footer_customizations' => ' &#169; 2014 Movie 2.0',
-			'developed_by_text' => 'Powered By Shining',
+			'footer_customizations' => ' &#169; 2014 Movie 2.0 Powered By Shining',
+			'developed_by_text' => '',
 			
-			// 'developed_by_weblizar_text' => 'Weblizar Themes',
+			 'developed_by_weblizar_text' => '',//'Weblizar Themes',
 			// 'developed_by_link' => 'http://weblizar.com/',
 			
 			'home_service_heading' => 'Our Services',

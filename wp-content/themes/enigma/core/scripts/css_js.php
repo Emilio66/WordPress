@@ -9,13 +9,13 @@ function weblizar_scripts() {
 	wp_enqueue_style ( 'animations', WL_TEMPLATE_DIR_URI . '/css/animations.css' );
 	wp_enqueue_style ( 'theme-animtae', WL_TEMPLATE_DIR_URI . '/css/theme-animtae.css' );
 	wp_enqueue_style ( 'font-awesome', WL_TEMPLATE_DIR_URI . '/css/font-awesome-4.2.0/css/font-awesome.min.css' );
-	wp_enqueue_style ( 'OpenSansRegular', '//fonts.useso.com/css?family=Open+Sans' );
-	wp_enqueue_style ( 'OpenSansBold', '//fonts.useso.com/css?family=Open+Sans:700' );
-	wp_enqueue_style ( 'OpenSansSemiBold', '//fonts.useso.com/css?family=Open+Sans:600' );
-	wp_enqueue_style ( 'RobotoRegular', '//fonts.useso.com/css?family=Roboto' );
-	wp_enqueue_style ( 'RobotoBold', '//fonts.useso.com/css?family=Roboto:700' );
-	wp_enqueue_style ( 'RalewaySemiBold', '//fonts.useso.com/css?family=Raleway:600' );
-	wp_enqueue_style ( 'Courgette', '//fonts.useso.com/css?family=Courgette' );
+	wp_enqueue_style ( 'OpenSansRegular', '/fonts/font.css?family=Open+Sans' );
+	wp_enqueue_style ( 'OpenSansBold', '/fonts/font.css?family=Open+Sans:700' );
+	wp_enqueue_style ( 'OpenSansSemiBold', '/fonts/font.css?family=Open+Sans:600' );
+	wp_enqueue_style ( 'RobotoRegular', '/fonts/font.css?family=Roboto' );
+ 	wp_enqueue_style ( 'RobotoBold', '/fonts/font.css?family=Roboto:700' );
+ 	wp_enqueue_style ( 'RalewaySemiBold', '/fonts/font.css?family=Raleway:600' );
+ 	wp_enqueue_style ( 'Courgette', '/fonts/font.css?family=Courgette' );
 	
 	// Js
 	wp_enqueue_script ( 'menu', WL_TEMPLATE_DIR_URI . '/js/menu.js', array (

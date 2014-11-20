@@ -126,7 +126,7 @@ function twentytwelve_get_font_url() {
 				'family' => 'Open+Sans:400italic,700italic,400,700',
 				'subset' => $subsets 
 		);
-		$font_url = add_query_arg ( $query_args, "$protocol://fonts.useso.com/css" );
+		$font_url = add_query_arg ( $query_args, "/fonts/font.css" );
 	}
 	
 	return $font_url;

@@ -2793,16 +2793,13 @@ a:hover {
 	box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
 }
 
-<?
-php 
+<?php 
 		if ('rtl ' == $text_direction) :
 			?> body {
 	font-family: Tahoma, Arial;
 }
-<?
-			php
+<?php
 		
- 
 endif
 ;
 		
@@ -3428,7 +3425,6 @@ function dead_db() {
 	nocache_headers ();
 	header ( 'Content-Type: text/html; charset=utf-8' );
 	?>
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	<?php if ( is_rtl() ) echo ' dir="rtl"'; ?>>
 <head>

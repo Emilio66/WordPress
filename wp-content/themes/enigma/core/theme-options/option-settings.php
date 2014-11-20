@@ -2,8 +2,8 @@
 
 $wl_theme_options = weblizar_get_options ();
 $get_pro = "GET PREMIUM";
-$get_pro_url = "http://weblizar.com/themes/enigma-premium/";
-$site = "http://www.weblizar.com";
+$get_pro_url = home_url ();
+$site = home_url ();
 ?>
 <div class="block ui-tabs-panel active" id="option-general">
 	<form method="post" id="weblizar_theme_options_general">
@@ -41,7 +41,7 @@ $site = "http://www.weblizar.com";
 						</h4>
 					</div>
 
-					<div id="collapseOne" class="panel-collapse collapse ">
+					<div id="collapseOne" class="panel-collapse collapse in">
 						<div class="panel-body">
 						<?php $stylesheet= ' ' ;?>
 						<select id="style_sheet" name="style_sheet" class="_inpute">
@@ -236,7 +236,7 @@ $site = "http://www.weblizar.com";
 							</a>
 						</h4>
 					</div>
-					<div id="collapse32" class="panel-collapse collapse">
+					<div id="collapse32" class="panel-collapse collapse in">
 						<div class="panel-body">
 							<h3><?php _e('Home Slide Image Two','weblizar'); ?></h3>
 							<input class="weblizar_inpute" type="text"
@@ -291,7 +291,7 @@ $site = "http://www.weblizar.com";
 							</a>
 						</h4>
 					</div>
-					<div id="collapse33" class="panel-collapse collapse">
+					<div id="collapse33" class="panel-collapse collapse in">
 						<div class="panel-body">
 							<h3><?php _e('Home Slide Image Three','weblizar'); ?></h3>
 							<input class="weblizar_inpute" type="text"
@@ -333,7 +333,7 @@ $site = "http://www.weblizar.com";
 				</div>
 			</div>
 		</div>
-		<div class="section">
+	<!--	<div class="section">
 			<div class="panel-group" id="accordion1">
 
 				<div class="panel panel-default">
@@ -357,6 +357,7 @@ $site = "http://www.weblizar.com";
 				</div>
 			</div>
 		</div>
+		-->
 		<!---Save DATA -->
 
 		<div id="button_section">
@@ -457,7 +458,7 @@ $site = "http://www.weblizar.com";
 							</a>
 					
 					</div>
-					<div id="collapse12" class="panel-collapse collapse">
+					<div id="collapse12" class="panel-collapse collapse in">
 						<div class="panel-body">
 							<h3><?php _e('Portfolio Two Image','weblizar'); ?></h3>
 							<input class="weblizar_inpute" type="text"
@@ -497,7 +498,7 @@ $site = "http://www.weblizar.com";
 							</a>
 					
 					</div>
-					<div id="collapse13" class="panel-collapse collapse">
+					<div id="collapse13" class="panel-collapse collapse in">
 						<div class="panel-body">
 							<h3><?php _e('Portfolio Three Image','weblizar'); ?></h3>
 							<input class="weblizar_inpute" type="text"
@@ -537,7 +538,7 @@ $site = "http://www.weblizar.com";
 							</a>
 					
 					</div>
-					<div id="collapse14" class="panel-collapse collapse">
+					<div id="collapse14" class="panel-collapse collapse in">
 						<div class="panel-body">
 							<h3><?php _e('Portfolio Four Image','weblizar'); ?></h3>
 							<input class="weblizar_inpute" type="text"
@@ -681,7 +682,7 @@ $site = "http://www.weblizar.com";
 								class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></a>
 						</h4>
 					</div>
-					<div id="collapse22" class="panel-collapse collapse">
+					<div id="collapse22" class="panel-collapse collapse in">
 						<div class="panel-body">
 							<hr>
 							<h3><?php _e('Service Title','weblizar'); ?></h3>
@@ -723,7 +724,7 @@ $site = "http://www.weblizar.com";
 								class="indicator glyphicon glyphicon-chevron-down  pull-right"></i></a>
 						</h4>
 					</div>
-					<div id="collapse23" class="panel-collapse collapse">
+					<div id="collapse23" class="panel-collapse collapse in">
 						<div class="panel-body">
 							<hr>
 							<h3><?php _e('Service Title','weblizar'); ?></h3>
@@ -994,8 +995,8 @@ $site = "http://www.weblizar.com";
 <!---------------- footer customization Settings form ------------------------>
 <?php
 
-$demo = "http://weblizar.com/themes/enigma-premium/";
-$purchase = "http://weblizar.com/themes/enigma-premium/";
+$demo = home_url ();
+$purchase = home_url ();
 $theme_name = "Enigma";
 ?>
 <div class="block ui-tabs-panel deactive" id="option-getpro">
@@ -1131,8 +1132,9 @@ ul li img {
 	<div class="row-fluid pricing-table pricing-three-column">
 		<div class="plan-name centre">
 			<a style="margin-bottom: 10px; textt-align: center" target="_new"
-				href="http://weblizar.com"><img
-				src="http://weblizar.com/wp-content/themes/home-theme/images/weblizar2.png" /></a>
+				href=<?php echo home_url ()?>>
+				<img
+				src="" /></a>
 			<div class="purchase_btn_div">
 				<a href="<?php echo $site ;?>" target="_new"
 					class="btn btn-primary btn-lg dmobtn">View Site</a>
@@ -1188,7 +1190,7 @@ ul li img {
 							<div class="theme-info">
 								<h3 class="theme-name">Enigma Pro Theme</h3>
 								<h4 class="theme-author">
-									By <a href="http://weblizar.com/" title="Visit author homepage">weblizar</a>
+									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
 								</h4>
 								<p class="theme-description">Enigma is HTML5 & CSS3 Responsive
 									WordPress Business theme with business style , 7 blog templates
@@ -1241,9 +1243,9 @@ ul li img {
 								</div>
 								<div class="col-md-12" style="margin-top: 20px;">
 									<a class="btn btn-success btn-lg" target="_new"
-										href="http://weblizar.com/themes/enigma-premium/">View Demo</a>&nbsp;&nbsp;
+										href=home_url ()>View Demo</a>&nbsp;&nbsp;
 									<a class="btn btn-danger btn-lg" target="_new"
-										href="http://weblizar.com/themes/enigma-premium/">Purchase Now</a>
+										href=home_url ()>Purchase Now</a>
 								</div>
 							</div>
 						</div>
@@ -1262,7 +1264,7 @@ ul li img {
 			<div class="img-wrapper">
 				<div class="enigma_home_portfolio_showcase">
 					<img class="enigma_img_responsive ftr_img"
-						src="http://weblizar.com/wp-content/themes/home-theme/images/green-lantern-premium-images/glp-slide-1.jpg">
+						src="">
 					<div class="enigma_home_portfolio_showcase_overlay">
 						<div class="enigma_home_portfolio_showcase_overlay_inner ">
 							<div class="enigma_home_portfolio_showcase_icons">
@@ -1298,13 +1300,13 @@ ul li img {
 					<div class="modal-body">
 						<div class="col-md-6">
 							<img class="enigma_img_responsive ftr_img"
-								src="http://weblizar.com/wp-content/themes/home-theme/images/green-lantern-premium-images/glp-slide-1.jpg">
+								src="#g">
 						</div>
 						<div class="col-md-6">
 							<div class="theme-info">
 								<h3 class="theme-name">Green Lantern Pro Theme</h3>
 								<h4 class="theme-author">
-									By <a href="http://weblizar.com/" title="Visit author homepage">weblizar</a>
+									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
 								</h4>
 								<p class="theme-description">Green Lantern is a Full Responsive
 									Multi-Purpose Theme suitable for Business , corporate office
@@ -1358,9 +1360,9 @@ ul li img {
 								<p></p>
 								<div class="col-md-12" style="margin-top: 20px;">
 									<a class="btn btn-success btn-lg" target="_new"
-										href="http://weblizar.com/preview/#green_lantern">View Demo</a>&nbsp;&nbsp;
+										href="#">View Demo</a>&nbsp;&nbsp;
 									<a class="btn btn-danger btn-lg" target="_new"
-										href="http://weblizar.com/themes/green-lantern-premium-theme/">Purchase
+										href="#">Purchase
 										Now</a>
 								</div>
 
@@ -1381,7 +1383,7 @@ ul li img {
 			<div class="img-wrapper">
 				<div class="enigma_home_portfolio_showcase">
 					<img class="enigma_img_responsive ftr_img"
-						src="http://weblizar.com/wp-content/uploads/2014/06/screenshot1.jpg">
+						src="">
 					<div class="enigma_home_portfolio_showcase_overlay">
 						<div class="enigma_home_portfolio_showcase_overlay_inner ">
 							<div class="enigma_home_portfolio_showcase_icons">
@@ -1417,13 +1419,13 @@ ul li img {
 					<div class="modal-body">
 						<div class="col-md-6">
 							<img class="enigma_img_responsive ftr_img"
-								src="http://weblizar.com/wp-content/uploads/2014/06/screenshot1.jpg">
+								src="">
 						</div>
 						<div class="col-md-6">
 							<div class="theme-info">
 								<h3 class="theme-name">Weblizar Pro Theme</h3>
 								<h4 class="theme-author">
-									By <a href="http://weblizar.com/" title="Visit author homepage">weblizar</a>
+									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
 								</h4>
 								<p class="theme-description">Responsive Multi-Purpose Theme
 									suitable for Business , corporate office and others .Cool Blog
@@ -1478,9 +1480,9 @@ ul li img {
 								<p></p>
 								<div class="col-md-12" style="margin-top: 20px;">
 									<a class="btn btn-success btn-lg" target="_new"
-										href="http://weblizar.com/preview/#weblizar_pro">View Demo</a>&nbsp;&nbsp;
+										href="#">View Demo</a>&nbsp;&nbsp;
 									<a class="btn btn-danger btn-lg" target="_new"
-										href="http://weblizar.com/themes/weblizar-premium-theme/">Purchase
+										href="#">Purchase
 										Now</a>
 								</div>
 
@@ -1509,7 +1511,7 @@ ul li img {
 			<div class="img-wrapper">
 				<div class="enigma_home_portfolio_showcase">
 					<img class="enigma_img_responsive ftr_img"
-						src="http://weblizar.com/wp-content/themes/home-theme/images/lightbox/fancy.jpg">
+						src="">
 					<div class="enigma_home_portfolio_showcase_overlay">
 						<div class="enigma_home_portfolio_showcase_overlay_inner ">
 							<div class="enigma_home_portfolio_showcase_icons">
@@ -1547,13 +1549,13 @@ ul li img {
 					<div class="modal-body">
 						<div class="col-md-6">
 							<img class="enigma_img_responsive ftr_img"
-								src="http://weblizar.com/wp-content/themes/home-theme/images/lightbox/fancy.jpg">
+								src="">
 						</div>
 						<div class="col-md-6">
 							<div class="theme-info">
 								<h3 class="theme-name">LightBox Slider Pro</h3>
 								<h4 class="theme-author">
-									By <a href="http://weblizar.com/" title="Visit author homepage">weblizar</a>
+									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
 								</h4>
 								<p class="theme-description">Lightbox Slider is premium
 									wordpress plugin to create gallery with lightbox slide</p>
@@ -1605,9 +1607,9 @@ ul li img {
 								</div>
 								<div class="col-md-12" style="margin-top: 20px;">
 									<a class="btn btn-success btn-lg" target="_new"
-										href="http://weblizar.com/lightbox-slider-pro/">View Demo</a>&nbsp;&nbsp;
+										href="#">View Demo</a>&nbsp;&nbsp;
 									<a class="btn btn-danger btn-lg" target="_new"
-										href="http://weblizar.com/lightbox-slider-pro/">Purchase Now</a>
+										href="#">Purchase Now</a>
 								</div>
 							</div>
 						</div>
@@ -1625,7 +1627,7 @@ ul li img {
 			<div class="img-wrapper">
 				<div class="enigma_home_portfolio_showcase">
 					<img class="enigma_img_responsive ftr_img"
-						src="http://weblizar.com/wp-content/themes/home-theme/images/gallery-pro.png">
+						src="">
 					<div class="enigma_home_portfolio_showcase_overlay">
 						<div class="enigma_home_portfolio_showcase_overlay_inner ">
 							<div class="enigma_home_portfolio_showcase_icons">
@@ -1659,13 +1661,13 @@ ul li img {
 					<div class="modal-body">
 						<div class="col-md-6">
 							<img class="enigma_img_responsive ftr_img"
-								src="http://weblizar.com/wp-content/themes/home-theme/images/gallery-pro.png">
+								src="#">
 						</div>
 						<div class="col-md-6">
 							<div class="theme-info">
 								<h3 class="theme-name">Responsive Photo Gallery</h3>
 								<h4 class="theme-author">
-									By <a href="http://weblizar.com/" title="Visit author homepage">weblizar</a>
+									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
 								</h4>
 								<p class="theme-description">A Highly Animated Image Gallery
 									Plugin For WordPress</p>
@@ -1717,10 +1719,10 @@ ul li img {
 								</div>
 								<div class="col-md-12" style="margin-top: 20px;">
 									<a class="btn btn-success btn-lg" target="_new"
-										href="http://weblizar.com/plugins/responsive-photo-gallery-pro/">View
+										href="#">View
 										Demo</a>&nbsp;&nbsp; <a class="btn btn-danger btn-lg"
 										target="_new"
-										href="http://weblizar.com/plugins/responsive-photo-gallery-pro/">Purchase
+										href="#">Purchase
 										Now</a>
 								</div>
 							</div>

@@ -15,8 +15,7 @@ if (have_posts ()) :
 	<?php get_template_part('post','content'); ?>	
 	<?php
 		
-endwhile
-		;
+endwhile;
 	 
 	endif;
 	?>

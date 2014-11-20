@@ -281,7 +281,7 @@ function timer_stop($display = 0, $precision = 3) {
  */
 function wp_debug_mode() {
 	if (WP_DEBUG) {
-		error_reporting ( E_ALL );
+		error_reporting ( E_ALL & ~E_NOTICE );
 		
 		if (WP_DEBUG_DISPLAY)
 			ini_set ( 'display_errors', 1 );

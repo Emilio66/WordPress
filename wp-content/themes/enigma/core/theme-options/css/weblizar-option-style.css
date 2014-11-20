@@ -790,7 +790,7 @@ li,dd {
 	border-radius: 0;
 	padding: 0 0 15px;
 	text-align: center;
-	font-family: 'OpenSansRegular';
+	/* font-family: 'OpenSansRegular'; */
 	cursor: pointer;
 }
 
@@ -825,7 +825,7 @@ li,dd {
 	overflow: hidden;
 }
 
-@media ( min-width : 768px) {
+@media ( min-width: 768px) {
 	#option-ourproduct .modal-dialog {
 		width: 70%;
 		margin: 30px auto;

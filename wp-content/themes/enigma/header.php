@@ -14,7 +14,7 @@
 <meta http-equiv="Content-Type"
 	content="<?php bloginfo('html_type'); ?>"
 	charset="<?php bloginfo('charset'); ?>" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>	
+<title><?php wp_title( '|', false, 'right' ); ?></title>	
 	<?php $wl_theme_options = weblizar_get_options(); ?>
 	<?php if($wl_theme_options['upload_image_favicon']!=''){ ?>
 	<link rel="shortcut icon"

@@ -4,7 +4,7 @@
  */
 add_action ( 'admin_menu', 'weblizar_admin_menu_pannel' );
 function weblizar_admin_menu_pannel() {
-	$page = add_theme_page ( 'Weblizar', 'Theme Options', 'edit_theme_options', 'weblizar', 'weblizar_option_panal_function' );
+	$page = add_theme_page ( 'Weblizar', '主题配置', 'edit_theme_options', 'weblizar', 'weblizar_option_panal_function' );
 	add_action ( 'admin_print_styles-' . $page, 'weblizar_admin_enqueue_script' );
 }
 /**
@@ -32,10 +32,10 @@ function weblizar_admin_enqueue_script() {
 function weblizar_option_panal_function() {
 	$theme_name = "Enigma-Pro";
 	$get_theme = "Get Our Premium Theme";
-	$purchase = "http://weblizar.com/themes/enigma-premium/";
+	$purchase = home_url ();
 	?>
 <div class="wrap" id="weblizar_wrap">
-	<div class="wbl-notify" id="wbl-notify">
+	<!--  <div class="wbl-notify" id="wbl-notify">
 		<div class="col-md-12">
 			<div class="col-md-2 col-sm-6">
 				<h1 style="text-decoration: underline; margin-bottom: 40px;"><?php echo $theme_name; ?></h1>
@@ -87,28 +87,28 @@ function weblizar_option_panal_function() {
 
 			</div>
 		</div>
-	</div>
+	</div>  -->
 	<h2>
 		<span></span>
 	</h2>
 	<div id="content_wrap">
 		<div class="weblizar-header">
 			<h2>
-				<span><?php _e('Weblizar Theme Settings','weblizar'); ?></span>
+				<span><?php _e('主题设定','weblizar'); ?></span>
 			</h2>
 			<div class="weblizar-submenu-links" id="weblizar-submenu-links">
 				<ul>
-					<!-- <li class=""> <div class="dashicons dashicons-format-aside"> </div> <a href="#" target="_blank" title="Documentation"><?php _e('Documentation','weblizar'); ?></a></li> -->
+					<!-- <li class=""> <div class="dashicons dashicons-format-aside"> </div> <a href="#" target="_blank" title="Documentation"><?php _e('Documentation','weblizar'); ?></a></li>
 					<li class="">
 						<div class="dashicons dashicons-format-chat"></div> <a
-						href="https://wordpress.org/support/theme/" target="_blank"
+						href="#" target="_blank"
 						title="Support Forum"><?php _e('Support Forum','weblizar'); ?></a>
 					</li>
 					<li class="">
 						<div class="dashicons dashicons-welcome-write-blog"></div> <a
 						href="<?php echo get_template_directory_uri() . '/readme.txt'?>"
 						target="_blank" title="Theme Changelog"><?php _e('View Changelog','weblizar'); ?></a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
@@ -119,13 +119,13 @@ function weblizar_option_panal_function() {
 								class="dashicons dashicons-admin-home"></div><?php _e('Home Option','weblizar');?></a>
 						<ul>
 							<li class="currunt"><a href="#" class="ui-tabs-anchor"
-								id="general"><?php _e('General Option','weblizar');?> </a></li>
-							<li><a href="#" id="home-image"><?php _e('Slide show Option','weblizar');?></a></li>
-							<li><a href="#" id="home-service"><?php _e('Service Option','weblizar');?></a></li>
-							<li><a href="#" id="portfolio-settings"><?php _e('Portfolio Option','weblizar');?></a></li>
-							<li><a href="#" id="footercall"><?php _e('Footer Callout Option','weblizar');?></a></li>
+								id="general"><?php _e('常规设置','weblizar');?> </a></li>
+							<li><a href="#" id="home-image"><?php _e('大屏滚图','weblizar');?></a></li>
+							<li><a href="#" id="home-service"><?php _e('关于Movie2.0','weblizar');?></a></li>
+							<li><a href="#" id="portfolio-settings"><?php _e('大会嘉宾','weblizar');?></a></li>
+							<li><a href="#" id="footercall"><?php _e('页脚标语','weblizar');?></a></li>
 						</ul></li>
-					<li><a href="#" id="social"><div
+					<!-- <li><a href="#" id="social"><div
 								class="dashicons dashicons-twitter"></div><?php _e('Social Media','weblizar');?></a></li>
 					<li><a href="#" id="footer"><div
 								class="dashicons dashicons-media-text"></div><?php _e('Footer Option','weblizar');?></a></li>
@@ -134,7 +134,7 @@ function weblizar_option_panal_function() {
 								class="dashicons dashicons-cart"></div><?php _e('Get Premium','weblizar');?></a></li>
 					<li><a href="#" id="ourproduct"><div
 								class="dashicons dashicons-plus"></div><?php _e('More Products','weblizar');?></a></li>
-
+ 					-->
 				</ul>
 				<!--------Option Data saving ------->
 					<?php require_once('option-data.php'); ?>	
