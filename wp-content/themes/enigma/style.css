@@ -20,8 +20,9 @@ Text Domain: weblizar
 /* Header Section css-------------------------------------------------------------- */
 body {
 	/* padding:0 30px;*/
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	background-color: #fff;
+	text-align:center;
 }
 
 #wrapper {
@@ -34,6 +35,87 @@ body {
 	padding-right: 0px;
 }
 
+/* Custom Css */
+.menu_scroll{}
+
+/*-----calendar-----*/
+.widget_calendar h3 {
+	display:none;
+}
+
+/*选择日历模块的宽度，如255px，100%表示自适应*/
+#wp-calendar {
+	width:100%;
+}
+
+/*当天日期背景色，以及前景色*/
+#wp-calendar #today {
+	background:#F5F9FE;
+	color:#8DDB6B;
+	font-weight:bold;
+}
+
+/*当天发表有文章的*/
+#wp-calendar tbody a {
+	font-weight:bold;
+	color:#75C6E5;
+}
+
+/*这里是标题的年月样式，分别是字体，背景色，颜色，粗体，文字间隔，对其方式，填充*/
+#wp-calendar caption {
+	font:14px 'Microsoft Yahei',arial,SimSun,sans-serif;
+	background:#e61f18;
+	color:#e61f18;
+	font-weight:bold;
+	letter-spacing:-0.05em;
+	text-align:center;
+	padding:5px 0 5px 0;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px;
+        border-radius: 5px;
+}
+
+/*日期的对齐方式*/
+
+#wp-calendar th,#wp-calendar td {
+	text-align:center;
+}
+
+/*日历单天的边框*/
+#wp-calendar tbody td {
+	border:1px solid #E9F0F4;
+	-moz-border-radius:2px;
+	-webkit-border-radius: 2px;
+        border-radius: 2px;
+}
+
+#wp-calendar tbody td.pad {
+	border:0 none;
+}
+
+/*星期的背景色前景色*/
+#wp-calendar th {
+	-moz-border-radius:3px;
+	-webkit-border-radius: 3px;
+        border-radius: 3px;
+	background:#ffaff8;
+	color:#fff;
+}
+
+/*上一个月的*/
+#wp-calendar td#prev {
+	text-align:left;
+	padding-top:5px;
+}
+
+/*下一个月的*/
+#wp-calendar td#next {
+	text-align:right;
+	padding-top:5px;
+}
+
+
+
 a:hover,a:focus {
 	text-decoration: none;
 }
@@ -42,12 +124,12 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: normal;
 	color: #666;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-weight: 600;
 }
 
 p,.textwidget {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 16px;
 	line-height: 26px;
 }
@@ -78,12 +160,12 @@ p,.textwidget {
 .logo {
 	text-align: left;
 	padding-bottom: 0px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .logo a {
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	margin-bottom: 10px;
 	font-size: 50px;
 	color: #fff;
@@ -94,7 +176,7 @@ p,.textwidget {
 }
 
 .logo p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	margin-top: 5px;
 	color: #fff;
 }
@@ -198,7 +280,7 @@ p,.textwidget {
 	font-weight: 500;
 	text-transform: uppercase;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .enigma_heading_title2 {
@@ -212,7 +294,7 @@ p,.textwidget {
 	letter-spacing: 1px;
 	padding-bottom: 10px;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .enigma_heading_title2 h3 {
@@ -248,7 +330,7 @@ p,.textwidget {
 	padding-left: 10px;
 	padding-right: 10px;
 	font-size: 3em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
@@ -281,7 +363,7 @@ p,.textwidget {
 	margin-bottom: 10px;
 	overflow: hidden;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	padding: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -375,7 +457,7 @@ p,.textwidget {
 	word-wrap: break-word;
 	margin: 0 0 10px;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .enigma_service_detail p {
@@ -421,7 +503,7 @@ p,.textwidget {
 	letter-spacing: normal;
 	line-height: 27px;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .enigma_service_detail_2 p {
@@ -503,12 +585,12 @@ p,.textwidget {
 .enigma_img_responsive {
 	width: 100%;
 	display: block;
-	height: auto;
 }
 
 .enigma_home_portfolio_showcase_overlay {
 	visibility: hidden;
 	position: absolute;
+	top:10%; 
 	width: 100%;
 	height: 100%;
 	top: -80%;
@@ -528,7 +610,8 @@ p,.textwidget {
 }
 
 .enigma_home_portfolio_showcase_overlay_inner {
-	position: absolute;
+	position: relative;
+	top:10%;
 	bottom: -110%;
 	left: 0;
 	width: 100%;
@@ -600,7 +683,7 @@ p,.textwidget {
 	border-radius: 0;
 	padding: 0 0 15px;
 	text-align: center;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	cursor: pointer;
 }
 
@@ -610,7 +693,7 @@ p,.textwidget {
 	margin: 0;
 	padding: 9px 3px 0px;
 	line-height: 35px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .enigma_home_portfolio_caption small {
@@ -730,7 +813,7 @@ p,.textwidget {
 .enigma-project-description p {
 	text-align: left;
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-weight: 500;
 }
 
@@ -783,7 +866,7 @@ p,.textwidget {
 }
 
 .enigma-project-detail-sidebar p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 20px;
@@ -793,7 +876,7 @@ p,.textwidget {
 }
 
 .enigma-project-detail-sidebar p small {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 15px;
 	padding-left: 0px;
 	display: block;
@@ -803,7 +886,7 @@ p,.textwidget {
 .enigma-project-detail-sidebar .launch-enigma-project a {
 	display: inline-block;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	margin: 15px 0 15px;
@@ -883,11 +966,6 @@ p,.textwidget {
 	margin-right: 0;
 	margin-bottom: 0;
 	float: left;
-}
-
-.enigma_img_responsive {
-	width: 100%;
-	display: block;
 }
 
 .enigma_gallery_showcase_overlay {
@@ -1247,7 +1325,7 @@ p,.textwidget {
 	border-radius: 0px;
 	display: block;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	width: 100px;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -1298,7 +1376,7 @@ p,.textwidget {
 }
 
 .enigma_blog_post_content p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 16px;
 	line-height: 27px;
 	margin: 0 0 20px;
@@ -1359,7 +1437,7 @@ p,.textwidget {
 }
 
 .enigma_recent_widget_post h3,.enigma_footer_widget_column ul li {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	margin-bottom: 2px;
@@ -1387,7 +1465,7 @@ p,.textwidget {
 }
 
 .enigma_recent_widget_post_date {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 13px;
 	line-height: 20px;
 	color: #ffffff;
@@ -1420,7 +1498,7 @@ p,.textwidget {
 
 .enigma_sidebar_widget .enigma_recent_widget_post h3 {
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 18px;
 	line-height: 20px;
 	margin-bottom: 2px;
@@ -1430,7 +1508,7 @@ p,.textwidget {
 .enigma_sidebar_widget h3 {
 	display: inline-block;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 16px;
 	line-height: 22px;
 	margin-bottom: 5px;
@@ -1479,7 +1557,7 @@ p,.textwidget {
 	border: 0 none;
 	cursor: pointer;
 	display: inline-block;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 20px;
@@ -1560,7 +1638,7 @@ p,.textwidget {
 	cursor: pointer;
 	display: inline-block;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 14px !important;
 	line-height: 20px;
 	margin: 0 5px 10px 0;
@@ -1639,7 +1717,7 @@ p,.textwidget {
 }
 
 .enigma_author_detail_wrapper p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 15px;
 	line-height: 25px;
 	margin: 0 0 0px;
@@ -1659,7 +1737,7 @@ p,.textwidget {
 }
 
 .enigma_comment_title h3 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 30px;
 	line-height: 25px;
 	margin: 0 0 -2px;
@@ -1694,7 +1772,7 @@ p,.textwidget {
 }
 
 .enigma_comment_detail_title {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 20px;
@@ -1702,7 +1780,7 @@ p,.textwidget {
 }
 
 .enigma_comment_detail p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 15px;
 	line-height: 25px;
 	margin: 0 0 20px;
@@ -1715,7 +1793,7 @@ p,.textwidget {
 	font-size: 14px;
 	display: block;
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .reply {
@@ -1748,7 +1826,7 @@ p,.textwidget {
 }
 
 .enigma_comment_form_section h2 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 30px;
 	letter-spacing: 1px;
 	line-height: 25px;
@@ -1763,7 +1841,7 @@ p,.textwidget {
 }
 
 .enigma_comment_form_section label {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 14px;
 	line-height: 20px;
 	margin: 0 0 11px;
@@ -1807,7 +1885,7 @@ p,.textwidget {
 
 .enigma_send_button,#enigma_send_button {
 	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	display: inline-block;
 	padding: 15px 40px;
 	margin-bottom: 0;
@@ -2090,7 +2168,7 @@ p,.textwidget {
 .enigma_footer_widget_area p {
 	font-size: 13px;
 	line-height: 22px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 
 .enigma_footer_widget_area h6 {
@@ -2119,7 +2197,7 @@ p,.textwidget {
 }
 
 .enigma_footer_widget_title {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 24px;
 	margin: 0px 0px 25px 0px;
 	line-height: 25px;
@@ -2131,7 +2209,7 @@ p,.textwidget {
 }
 
 .enigma_footer_widget_column address {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 14px;
 	line-height: 25px;
 }
@@ -2166,7 +2244,7 @@ p,.textwidget {
 
 .enigma_footer_widget_link a {
 	display: block;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	font-size: 13px;
 	line-height: 20px;
 	margin: 0 0 10px;
@@ -2190,7 +2268,7 @@ p,.textwidget {
 }
 
 .enigma_footer_area p {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 	line-height: 20px;
 	font-size: 13px;
 	bottom: 0;

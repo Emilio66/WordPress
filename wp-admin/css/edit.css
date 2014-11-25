@@ -1146,7 +1146,7 @@ table.links-table {
  * HiDPI Displays
  */
 @media print , ( -o-min-device-pixel-ratio : 5/4) , (
-		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dppx) {
 	#content-resize-handle,#post-body .wp_themeSkin .mceStatusbar a.mceResize
 		{
 		background: transparent url(../images/resize-2x.gif) no-repeat scroll

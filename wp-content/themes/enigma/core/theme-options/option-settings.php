@@ -10,23 +10,28 @@ $site = home_url ();
 		<div id="heading">
 			<table style="width: 100%;">
 				<tr>
-					<td cols=2><h2><?php _e('General Settings','weblizar');?></h2></td>
+					<td cols=2><h2><?php _e('常规设置','weblizar');?></h2></td>
 					<td style="width: 30%;">
 						<div class="weblizar_settings_loding"
 							id="weblizar_loding_general_image"></div>
 						<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_general_success"><?php _e('Options Data updated','weblizar');?></div>
-						<div class="weblizar_settings_massage"
+					<!--	<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_general_reset"><?php _e('Options data Reset','weblizar');?></div>
-					</td>
-					<td style="text-align: right;"><input class="button" type="button"
+					  --></td>
+					<td style="text-align: right;">
+						<!--<input class="button" type="button"
 						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('general');"> <input
-						class="button button-primary" type="button" value="Save Options"
-						onclick="weblizar_option_data_save('general')"></td>
+						onclick="weblizar_option_data_reset('general');">-->
+					<input
+						class="button button-primary" type="button" value="Save"
+						onclick="weblizar_option_data_save('general')">  
+					</td>
 				</tr>
 			</table>
 		</div>
+		
+		<!-- 
 		<div class="section">
 			<div class="panel-group" id="accordion">
 
@@ -79,6 +84,7 @@ $site = home_url ();
 				</div>
 			</div>
 		</div>
+		 -->
 		<div class="section">
 			<h3><?php _e('Custom Logo','weblizar'); ?></h3>
 			<input class="weblizar_inpute" type="text"
@@ -141,10 +147,12 @@ $site = home_url ();
 		</div>
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_general"
-				name="weblizar_settings_save_general" /> <input class="button"
+				name="weblizar_settings_save_general" /> 
+			<!-- 	<input class="button"
 				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('general');"> <input
-				class="button button-primary" type="button" value="Save Options"
+				onclick="weblizar_option_data_reset('general');">  -->
+				<input
+				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('general')">
 		</div>
 	</form>
@@ -167,7 +175,7 @@ $site = home_url ();
 					<td style="text-align: right;"><input class="button" type="button"
 						name="reset" value="Restore Defaults"
 						onclick="weblizar_option_data_reset('home-image');"> <input
-						class="button button-primary" type="button" value="Save Options"
+						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('home-image')"></td>
 				</tr>
 			</table>
@@ -362,10 +370,12 @@ $site = home_url ();
 
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_home-image"
-				name="weblizar_settings_save_home-image" /> <input class="button"
+				name="weblizar_settings_save_home-image" />
+				<!-- <input class="button"
 				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('home-image');"> <input
-				class="button button-primary" type="button" value="Save Options"
+				onclick="weblizar_option_data_reset('home-image');"> --> 
+				<input
+				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('home-image')">
 		</div>
 	</form>
@@ -386,11 +396,16 @@ $site = home_url ();
 						<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_portfolio-settings_reset"><?php _e('Options data Reset','weblizar');?></div>
 					</td>
-					<td style="text-align: right;"><input class="button" type="button"
+					<td style="text-align: right;">
+					
+						<!-- <input class="button" type="button"
 						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('portfolio-settings');"> <input
-						class="button button-primary" type="button" value="Save Options"
-						onclick="weblizar_option_data_save('portfolio-settings')"></td>
+						onclick="weblizar_option_data_reset('portfolio-settings');">
+					 -->	<input
+						class="button button-primary" type="button" value="Save"
+						onclick="weblizar_option_data_save('portfolio-settings')">
+						
+						</td>
 				</tr>
 			</table>
 		</div>
@@ -591,10 +606,12 @@ $site = home_url ();
 		<div id="button_section">
 			<input type="hidden" value="1"
 				id="weblizar_settings_save_portfolio-settings"
-				name="weblizar_settings_save_portfolio-settings" /> <input
+				name="weblizar_settings_save_portfolio-settings" />
+				<!-- <input
 				class="button" type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('portfolio-settings');"> <input
-				class="button button-primary" type="button" value="Save Options"
+				onclick="weblizar_option_data_reset('portfolio-settings');">
+				  --> <input
+				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('portfolio-settings')">
 		</div>
 	</form>
@@ -615,10 +632,12 @@ $site = home_url ();
 						<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_home-service_reset"><?php _e('Options data Reset','weblizar');?></div>
 					</td>
-					<td style="text-align: right;"><input class="button" type="button"
+					<td style="text-align: right;">
+					<!-- <input class="button" type="button"
 						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('home-service');"> <input
-						class="button button-primary" type="button" value="Save Options"
+						onclick="weblizar_option_data_reset('home-service');"> 
+						 --><input
+						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('home-service')"></td>
 				</tr>
 			</table>
@@ -755,7 +774,7 @@ $site = home_url ();
 				</div>
 			</div>
 		</div>
-		<div class="section">
+		<!-- <div class="section">
 			<div class="panel-group" id="accordion3">
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -775,14 +794,16 @@ $site = home_url ();
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div id="button_section">
 			<input type="hidden" value="1"
 				id="weblizar_settings_save_home-service"
-				name="weblizar_settings_save_home-service" /> <input class="button"
+				name="weblizar_settings_save_home-service" />
+				<!-- <input class="button"
 				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('home-service');"> <input
-				class="button button-primary" type="button" value="Save Options"
+				onclick="weblizar_option_data_reset('home-service');">
+				 --> <input
+				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('home-service')">
 			<!--  alert massage when data saved and reset -->
 		</div>
@@ -804,10 +825,12 @@ $site = home_url ();
 						<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_social_reset"><?php _e('Options data Reset','weblizar');?></div>
 					</td>
-					<td style="text-align: right;"><input class="button" type="button"
+					<td style="text-align: right;">
+					<!-- <input class="button" type="button"
 						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('social');"> <input
-						class="button button-primary" type="button" value="Save Options"
+						onclick="weblizar_option_data_reset('social');"> -->
+						 <input
+						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('social')"></td>
 				</tr>
 			</table>
@@ -867,10 +890,12 @@ $site = home_url ();
 		</div>
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_social"
-				name="weblizar_settings_save_social" /> <input class="button"
+				name="weblizar_settings_save_social" />
+				<!--  <input class="button"
 				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('social');"> <input
-				class="button button-primary" type="button" value="Save Options"
+				onclick="weblizar_option_data_reset('social');">  -->
+				<input
+				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('social')">
 		</div>
 	</form>
@@ -891,10 +916,12 @@ $site = home_url ();
 						<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_footer_reset"><?php _e('Options data Reset','weblizar');?></div>
 					</td>
-					<td style="text-align: right;"><input class="button" type="button"
+					<td style="text-align: right;">
+					<!--<input class="button" type="button"
 						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('footer');"> <input
-						class="button button-primary" type="button" value="Save Options"
+						onclick="weblizar_option_data_reset('footer');">  -->
+						 <input
+						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('footer')"></td>
 				</tr>
 			</table>
@@ -929,10 +956,12 @@ $site = home_url ();
 		</div>
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_footer"
-				name="weblizar_settings_save_footer" /> <input class="button"
+				name="weblizar_settings_save_footer" />
+				<!-- <input class="button"
 				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('footer');"> <input
-				class="button button-primary" type="button" value="Save Options"
+				onclick="weblizar_option_data_reset('footer');">  -->
+				 <input
+				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('footer')">
 		</div>
 	</form>
@@ -953,10 +982,11 @@ $site = home_url ();
 						<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_footercall_reset"><?php _e('Options data Reset','weblizar');?></div>
 					</td>
-					<td style="text-align: right;"><input class="button" type="button"
+					<td style="text-align: right;"><!-- <input class="button" type="button"
 						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('footercall');"> <input
-						class="button button-primary" type="button" value="Save Options"
+						onclick="weblizar_option_data_reset('footercall');">
+						 --> <input
+						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('footercall')"></td>
 				</tr>
 			</table>
@@ -984,10 +1014,12 @@ $site = home_url ();
 		</div>
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_footercall"
-				name="weblizar_settings_save_footercall" /> <input class="button"
+				name="weblizar_settings_save_footercall" />
+				<!-- <input class="button"
 				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('footercall');"> <input
-				class="button button-primary" type="button" value="Save Options"
+				onclick="weblizar_option_data_reset('footercall');">  --> 
+				<input
+				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('footercall')">
 		</div>
 	</form>

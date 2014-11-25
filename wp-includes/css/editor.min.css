@@ -1695,7 +1695,7 @@ html:lang(he-il) .rtl .quicktags-toolbar input,html:lang(he-il) .rtl .wp-switch-
 }
 
 @media print , ( -o-min-device-pixel-ratio :5/4) , (
-		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dpi) {
+		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dppx) {
 	#wp-fullscreen-buttons #wp_fs_image span.mce_image,.wp-media-buttons .add_media span.wp-media-buttons-icon
 		{
 		background: 0 0

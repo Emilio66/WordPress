@@ -4,7 +4,7 @@
 $wl_theme_options = weblizar_get_options ();
 if ($wl_theme_options ['blog_title'] != '') {
 	?>
-	<div class="container">
+	<div class="container" id="<?php echo esc_attr($wl_theme_options['blog_tag']); ?>">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="enigma_heading_title">
@@ -127,8 +127,48 @@ endwhile
 		</div>
 	</div>
 </div>
+
+<!-- register form -->
+
+<form role="form">
+	<div id="leftForm" style="float: left;margin-left: auto;width:45%;margin-bottom:20px">
+	  <div  style="margin-bottom: 50px">
+	    <label for="nameInput" style="float: left;width:15%">姓名：</label>
+	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" id="nameInput" name="name" placeholder="姓名"/>
+	    <font color="#e61f18" style="width: 5%;float:left">*</font>
+	  </div>
+	  <div  style="margin-bottom: 50px">
+	    <label for="emailInput" style="float: left;width:15%">邮箱：</label>
+	    <input type="email" class="enigma_con_input_control" style="width: 75%;float:left" id="emailInput" name="email" placeholder="邮箱"/>
+	    <font color="#e61f18" style="width: 5%;float:left">*</font>
+	  </div>
+	  <div style="margin-bottom: 50px">
+	    <label for="phoneInput" style="width: 15%;float:left">电话：</label>
+	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" id="phoneInput" name="phone" placeholder="电话"/>
+	    <font color="#e61f18" style="width: 5%;float:left">*</font>
+	  </div>
+	  <div style="margin-bottom: 50px">
+	    <label for="company"  style="width: 15%;float:left">公司名：</label>
+	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" id="phoneInput" name="company" placeholder="公司名"/>
+	    <font color="#e61f18"  style="width: 5%;float:left">*</font>
+	  </div>
+  </div>
+  
+  <div id="rightForm" style="float: left;margin-right:auto;margin-bottom:20px;width:55%">
+	  <div >
+	    <label for="introduction" style="float:left;">简介：</label></br>
+	    <textarea id="introduction" name="introduction" class="enigma_con_textarea_control"
+	    style="float:left;width: 90%; margin-right:3%;height:160px;margin-bottom:20px" 
+	     placeholder="关于自己正从事的事情或者自己的一个简介">
+	     </textarea><br/><br/>
+	     <input type="submit" class="enigma_send_button" style="float: left" value="报名"></input>
+	  </div>
+ </div>
+</form>
+
+
 <div class="enigma_callout_area">
-	<div class="container">
+	<div class="container" id="<?php echo esc_attr($wl_theme_options['register_tag']); ?>">
 		<div class="row">
 		<?php if($wl_theme_options['fc_title'] !='') { ?>
 			<div class="col-md-9">
@@ -136,14 +176,15 @@ endwhile
 					<i class="fa fa-thumbs-up"></i><?php echo esc_attr($wl_theme_options['fc_title']);?></p>
 			</div>
 			<?php } ?>
-			<?php if($wl_theme_options['fc_btn_txt'] !='') { ?>
-			<div class="col-md-3">
-				<a href="<?php echo esc_url($wl_theme_options['fc_btn_link']); ?>"
-					class="enigma_callout_btn"><?php echo esc_attr($wl_theme_options['fc_btn_txt']); ?></a>
-			</div>
-			<?php } ?>
+			<?php //if($wl_theme_options['fc_btn_txt'] !='') { ?>
+			<!-- <div class="col-md-3">
+				<a href="<?php //echo esc_url($wl_theme_options['fc_btn_link']); ?>"
+					class="enigma_callout_btn"><?php //echo esc_attr($wl_theme_options['fc_btn_txt']); ?></a>
+			</div> -->
+			<?php //} ?>
 		</div>
 
 	</div>
-	<div class="enigma_callout_shadow"></div>
+	<div class="enigma_callout_shadow" id="<?php echo esc_attr($wl_theme_options['partner_tag']); ?>">	
+	</div>
 </div>

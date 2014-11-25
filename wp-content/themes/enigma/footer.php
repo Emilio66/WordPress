@@ -2,6 +2,24 @@
 <?php $wl_theme_options = weblizar_get_options(); ?>
 <!-- Footer Widget Secton -->
 <div class="enigma_footer_widget_area">
+		<table  border="0" style="border:0;">
+			<tr>
+				<td><img class='enigma_img_responsive' alt="闪铃" src="<?php echo esc_attr($wl_theme_options['shining']);?>"></td>
+				<td><img class='enigma_img_responsive' alt="陪你看电影" src="<?php echo esc_attr($wl_theme_options['movie']);?>"></td>
+				<td><img class='enigma_img_responsive' alt="5TV" src="<?php echo esc_attr($wl_theme_options['tv5']);?>"></td>
+				<td><img class='enigma_img_responsive' alt="蓝色光标" src="<?php echo esc_attr($wl_theme_options['blueFocus']);?>"></td>
+				<td><img class='enigma_img_responsive' alt="驼帮" src="<?php echo esc_attr($wl_theme_options['tuobang']);?>"></td>
+				<td><img class='enigma_img_responsive' alt="酷派" src="<?php echo esc_attr($wl_theme_options['coolpad']);?>"></td>
+				<td><img class='enigma_img_responsive' alt="格瓦拉" src="<?php echo esc_attr($wl_theme_options['gewara']);?>"></td>
+			</tr>
+			<tr>
+				
+				<td><img class='enigma_img_responsive' alt="樽会所" src="<?php echo esc_attr($wl_theme_options['zunhuisuo']);?>"></td>
+				<td><img class='enigma_img_responsive' alt="红头帮" src="<?php echo esc_attr($wl_theme_options['hongtou']);?>"></td>
+				<!-- <td><img class='enigma_img_responsive' alt="时光网" src="<?php echo esc_attr($wl_theme_options['Mtime']);?>"></td> -->
+			</tr>
+		</table>
+
 	<div class="container">
 		<div class="row">
 			<?php
@@ -45,33 +63,6 @@ if ($wl_theme_options ['footer_customizations']) {
 			</p>
 			
 			
-			<?php if($wl_theme_options['footer_section_social_media_enbled'] == 'on') { ?>
-			<div class="enigma_footer_social_div">
-				<ul class="social">
-					<?php if($wl_theme_options['fb_link']!='') { ?>
-					   <li class="facebook" data-toggle="tooltip" data-placement="top"
-						title="Facebook"><a
-						href="<?php echo esc_url($wl_theme_options['fb_link']); ?>"><i
-							class="fa fa-facebook"></i></a></li>
-					<?php } if($wl_theme_options['twitter_link']!='') { ?>
-					<li class="twitter" data-toggle="tooltip" data-placement="top"
-						title="Twitter"><a
-						href="<?php echo esc_url($wl_theme_options['twitter_link']) ; ?>"><i
-							class="fa fa-twitter"></i></a></li>				
-					<?php } if($wl_theme_options['linkedin_link']!='') { ?>
-					<li class="linkedin" data-toggle="tooltip" data-placement="top"
-						title="Linkedin"><a
-						href="<?php echo esc_url($wl_theme_options['linkedin_link']) ; ?>"><i
-							class="fa fa-linkedin"></i></a></li>
-					<?php } if($wl_theme_options['youtube_link']!='') { ?>
-					<li class="youtube" data-toggle="tooltip" data-placement="top"
-						title="Youtube"><a
-						href="<?php echo esc_url($wl_theme_options['youtube_link']) ; ?>"><i
-							class="fa fa-youtube"></i></a></li>
-	                <?php } ?>
-					</ul>
-			</div>
-			<?php } ?>
 			</div>
 	</div>		
 		<?php if($wl_theme_options['custom_css']) ?>

@@ -2,7 +2,7 @@
 <?php $wl_theme_options = weblizar_get_options(); ?>
 <div class="enigma_service">
 <?php if($wl_theme_options['home_service_heading'] !='') { ?>
-<div class="container">
+<div class="container" id="<?php echo esc_attr($wl_theme_options['home_service_tag']); ?>">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="enigma_heading_title">

@@ -2232,7 +2232,7 @@ body.import-php #TB_window,body.index-php #TB_window,body.plugin-install-php #TB
 }
 
 @media print , ( -o-min-device-pixel-ratio :5/4) , (
-		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dpi) {
+		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120 dppx) {
 	body.import-php #TB_window,body.index-php #TB_window,body.plugin-install-php #TB_window,body.plugins-php #TB_window,body.update-core-php #TB_window
 		{
 		background: #fcfcfc url(../images/spinner-2x.gif) no-repeat center;
@@ -2607,7 +2607,7 @@ img {
 }
 
 @media print , ( -o-min-device-pixel-ratio :5/4) , (
-		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dpi) {
+		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dppx) {
 	div.star-holder,div.star-holder .star-rating {
 		background: url(../images/stars-2x.png?ver=20121108) repeat-x bottom
 			left;
@@ -8106,7 +8106,7 @@ table.links-table {
 }
 
 @media print , ( -o-min-device-pixel-ratio :5/4) , (
-		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dpi) {
+		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dppx) {
 	#content-resize-handle,#post-body .wp_themeSkin .mceStatusbar a.mceResize
 		{
 		background: url(../images/resize-2x.gif) no-repeat scroll right bottom;
@@ -8837,7 +8837,7 @@ div.revisions-controls>.wp-slider>.ui-slider-handle {
 }
 
 @media print , ( -o-min-device-pixel-ratio :5/4) , (
-		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dpi) {
+		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dppx) {
 	.revision-tick.completed-false {
 		background-image: url(../images/spinner-2x.gif)
 	}
@@ -9879,7 +9879,7 @@ audio,video {
 }
 
 @media print , ( -o-min-device-pixel-ratio :5/4) , (
-		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dpi) {
+		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dppx) {
 	.imgedit-wait {
 		background-image: url(../images/spinner-2x.gif)
 	}
@@ -11489,7 +11489,7 @@ body.full-overlay-active {
 }
 
 @media print , ( -o-min-device-pixel-ratio :5/4) , (
-		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dpi) {
+		-webkit-min-device-pixel-ratio :1.25) , ( min-resolution :120dppx) {
 	.wp-full-overlay .collapse-sidebar-arrow {
 		background-image: url(../images/arrows-2x.png);
 		-webkit-background-size: 15px 123px;

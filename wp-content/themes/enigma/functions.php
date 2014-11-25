@@ -92,42 +92,56 @@ add_action ( 'init', 'coolwp_remove_open_sans_from_wp_core' );
 */
 // Sane Defaults
 function weblizar_default_settings() {
-	$ImageUrl = WL_TEMPLATE_DIR_URI . "/images/1.png"; 
-	$ImageUrl2 = WL_TEMPLATE_DIR_URI . "/images/2.png";
-	$ImageUrl3 = WL_TEMPLATE_DIR_URI . "/images/3.png";
-	$ImageUrl4 = WL_TEMPLATE_DIR_URI . "/images/portfolio1.png";
-	$ImageUrl5 = WL_TEMPLATE_DIR_URI . "/images/portfolio2.png";
-	$ImageUrl6 = WL_TEMPLATE_DIR_URI . "/images/portfolio3.png";
-	$ImageUrl7 = WL_TEMPLATE_DIR_URI . "/images/portfolio4.png";
-	$ImageUrl8 = WL_TEMPLATE_DIR_URI . "/images/portfolio5.png";
-	$ImageUrl9 = WL_TEMPLATE_DIR_URI . "/images/portfolio6.png";
+	$ImageUrl = "/WordPress/wp-content/uploads/2014/11/11.png"; 
+	$ImageUrl2 = "/WordPress/wp-content/uploads/2014/11/13.png";
+	$ImageUrl3 = "/WordPress/wp-content/uploads/2014/11/16.jpg";
+	$ImageUrl4 = "/WordPress/wp-content/uploads/2014/11/FIL2.JPG";
+	$ImageUrl5 = "/WordPress/wp-content/uploads/2014/11/FIL3.JPG";
+	$ImageUrl6 = "/WordPress/wp-content/uploads/2014/11/FIL4.JPG";
+	$ImageUrl7 = "/WordPress/wp-content/uploads/2014/11/FIL5.JPG";
+	$ImageUrl8 = "/WordPress/wp-content/uploads/2014/11/FIL1.JPG";
+	$ImageUrl9 = "/WordPress/wp-content/uploads/2014/11/FIL1.JPG";
+	
+	$Mtime 		= "/WordPress/wp-content/uploads/2014/11/mtime.png";
+	$shining 	= "/WordPress/wp-content/uploads/2014/11/1.png";
+	$movie 		= "/WordPress/wp-content/uploads/2014/11/2.png";
+	$tv5	 	= "/WordPress/wp-content/uploads/2014/11/3.png";
+	$blueFocus 	="/WordPress/wp-content/uploads/2014/11/4.png";
+	$tuobang	="/WordPress/wp-content/uploads/2014/11/5.png";
+	$coolpad	="/WordPress/wp-content/uploads/2014/11/6.png";
+	$gewara		="/WordPress/wp-content/uploads/2014/11/7.png";
+	$zunhuisuo	="/WordPress/wp-content/uploads/2014/11/8.png";
+	$hongtou	="/WordPress/wp-content/uploads/2014/11/9.png";
+	
+	$place		="/WordPress/wp-content/uploads/2014/11/place.png";
+	
 	$wl_theme_options = array (
 			
-			// Logo and Fevicon header
-			'upload_image_logo' => '',
-			'height' => '55',
-			'width' => '150',
+			// Logo and Favicon header
+			'upload_image_logo' => '/WordPress/wp-content/uploads/2014/11/wide-LOGO.png',
+			'height' => '100',
+			'width' => '350',
 			'text_title' => 'off',
 			'upload_image_favicon' => '',
 			'custom_css' => '',
 			'slide_image_1' => $ImageUrl,
-			'slide_title_1' => 'Slide Title',
-			'slide_desc_1' => 'Lorem Ipsum is simply dummy text of the printing',
-			'slide_btn_text_1' => 'Read More',
-			'slide_btn_link_1' => '#',
+			'slide_title_1' => '金融、互联网、影视、公关、媒体行业资源交流平台，为影视行业的发展提供资本、项目、人脉服务',
+			'slide_desc_1' => '',
+			'slide_btn_text_1' => '欢迎骚扰',
+			'slide_btn_link_1' => '#about_movie',
 			'slide_image_2' => $ImageUrl2,
-			'slide_title_2' => 'Movie 2.0 来啦！',
-			'slide_desc_2' => 'Contrary to popular belief, Lorem Ipsum is not simply random text',
-			'slide_btn_text_2' => 'Read More',
-			'slide_btn_link_2' => '#',
+			'slide_title_2' => '不忘初心，大胆想象',
+			'slide_desc_2' => '',
+			'slide_btn_text_2' => '',
+			'slide_btn_link_2' => '',
 			'slide_image_3' => $ImageUrl3,
-			'slide_title_3' => 'Contrary to popular ',
-			'slide_desc_3' => 'Aldus PageMaker including versions of Lorem Ipsum, rutrum turpi',
-			'slide_btn_text_3' => 'Read More',
-			'slide_btn_link_3' => '#',
-			'blog_title' => 'Latest Blog',
-			'fc_title' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-			'fc_btn_txt' => 'More Features',
+			'slide_title_3' => '历练灵魂，合作共享 ',
+			'slide_desc_3' => '',
+			'slide_btn_text_3' => '',
+			'slide_btn_link_3' => '',
+			'blog_title' => '往届回顾',
+			'fc_title' => '欢迎积极打扰、主动骚扰、畅想未来， M君在樽会所等你（微信群：movie 2.0） ',
+			'fc_btn_txt' => '我要报名',
 			'fc_btn_link' => '#',
 			
 			// Social media links, doesn't need them, turn them off
@@ -147,37 +161,58 @@ function weblizar_default_settings() {
 			 'developed_by_weblizar_text' => '',//'Weblizar Themes',
 			// 'developed_by_link' => 'http://weblizar.com/',
 			
-			'home_service_heading' => 'Our Services',
-			'service_1_title' => "Idea",
-			'service_1_icons' => "fa fa-google",
-			'service_1_text' => "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.",
+			'home_service_heading' => '关于Movie2.0',
+			'service_1_title' => "线上",
+			'service_1_icons' => "fa fa-cloud-upload",
+			'service_1_text' => "每天发布投资、项目、人才供需信息 为影视行业的创作者提供作品展示、项目合作、人脉拓展、创投对接的平台 促进影视行业的迭代升级",
 			'service_1_link' => "#",
 			
-			'service_2_title' => "Records",
-			'service_2_icons' => "fa fa-database",
-			'service_2_text' => "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.",
+			'service_2_title' => "线下",
+			'service_2_icons' => "fa fa-cloud-download",
+			'service_2_text' => "全年24期主题聚会活动，汇集金融、互联网、公关、媒体、影视等行业人才",
 			'service_2_link' => "#",
 			
-			'service_3_title' => "WordPress",
-			'service_3_icons' => "fa fa-wordpress",
-			'service_3_text' => "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.",
+			'service_3_title' => "联系我们",
+			'service_3_icons' => "fa fa-phone",
+			'service_3_text' => "企业邮箱：movie20@pfeng.com.cn &br;企业QQ号： 3160129549 &br;微信公众号： Movie20 &br;公司电话： 010—58612562",
 			'service_3_link' => "#",
 			
 			// Portfolio Settings:
 			'portfolio_home' => 'on',
-			'port_heading' => 'Recent Works',
+			'port_heading' => '大会安排',
 			'port_1_img' => $ImageUrl4,
-			'port_1_title' => 'Bonorum',
+			'port_1_title' => 'Geek',
 			'port_1_link' => '#',
 			'port_2_img' => $ImageUrl5,
-			'port_2_title' => 'Content',
+			'port_2_title' => 'Lisa',
 			'port_2_link' => '#',
 			'port_3_img' => $ImageUrl6,
-			'port_3_title' => 'dictionary',
+			'port_3_title' => 'Pink',
 			'port_3_link' => '#',
 			'port_4_img' => $ImageUrl7,
-			'port_4_title' => 'randomised',
-			'port_4_link' => '#' 
+			'port_4_title' => 'Wiser',
+			'port_4_link' => '#',
+
+			//菜单锚点设置
+			'home_service_tag'=>'about_movie',
+			'portfolio_tag'=>'introduction',
+			'blog_tag' => 'history',
+			'register_tag'=>'register',
+			'partner_tag'=>'partner',
+			
+			//合作厂商
+			'Mtime' => $Mtime,
+			'shining' =>$shining,
+			'movie'	=>$movie,
+			'tv5' => $tv5,
+			'blueFocus' => $blueFocus,
+			'tuobang'=>$tuobang,
+			'coolpad' =>$coolpad,
+			'gewara'=>$gewara,
+			'zunhuisuo'=>$zunhuisuo,
+			'hongtou'=>$hongtou,
+			
+			'place' =>$place
 	)
 	;
 	return apply_filters ( 'enigma_options', $wl_theme_options );
@@ -230,7 +265,8 @@ function weblizar_head_setup() {
 	);
 	add_theme_support ( 'custom-background', $args );
 	add_theme_support ( 'automatic-feed-links' );
-	require (WL_TEMPLATE_DIR . '/options-reset.php'); // Reset Theme Options Here
+	//This behavior is too dangerous !!!!  remove it 
+	//require (WL_TEMPLATE_DIR . '/options-reset.php'); // Reset Theme Options Here
 }
 
 // Read more tag to formatting in blog page

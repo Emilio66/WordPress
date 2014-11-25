@@ -588,7 +588,7 @@ img.wp-oembed {
 }
 
 @media print , ( -o-min-device-pixel-ratio : 5/4) , (
-		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dppx) {
 	.mce-content-body img.mce-wp-more {
 		background-image: url( images/more-2x.png );
 		background-size: 1900px 20px;

@@ -1636,7 +1636,7 @@ body.full-overlay-active {
  * HiDPI Displays
  */
 @media print , ( -o-min-device-pixel-ratio : 5/4) , (
-		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dppx) {
 	.wp-full-overlay .collapse-sidebar-arrow {
 		background-image: url(../images/arrows-2x.png);
 		-webkit-background-size: 15px 123px;

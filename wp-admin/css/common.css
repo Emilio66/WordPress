@@ -2356,7 +2356,7 @@ body.plugin-install-php #TB_window,body.import-php #TB_window,body.plugins-php #
 }
 
 @media print , ( -o-min-device-pixel-ratio : 5/4) , (
-		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dppx) {
 	body.plugin-install-php #TB_window,body.import-php #TB_window,body.plugins-php #TB_window,body.update-core-php #TB_window,body.index-php #TB_window
 		{
 		background: #fcfcfc url( ../images/spinner-2x.gif ) no-repeat center;
@@ -2759,7 +2759,7 @@ img {
  * HiDPI Displays
  */
 @media print , ( -o-min-device-pixel-ratio : 5/4) , (
-		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dpi) {
+		-webkit-min-device-pixel-ratio : 1.25) , ( min-resolution : 120dppx) {
 	/* Back-compat for pre-3.8 */
 	div.star-holder,div.star-holder .star-rating {
 		background: url(../images/stars-2x.png?ver=20121108) repeat-x bottom

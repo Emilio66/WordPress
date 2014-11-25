@@ -14,7 +14,7 @@
 <meta http-equiv="Content-Type"
 	content="<?php bloginfo('html_type'); ?>"
 	charset="<?php bloginfo('charset'); ?>" />
-<title><?php wp_title( '|', false, 'right' ); ?></title>	
+<title><?php wp_title( '|', true, 'right' ); ?></title>	
 	<?php $wl_theme_options = weblizar_get_options(); ?>
 	<?php if($wl_theme_options['upload_image_favicon']!=''){ ?>
 	<link rel="shortcut icon"
@@ -23,14 +23,14 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="">
-	<div>
+	
 		<!-- Header Section -->
 		<div class="header_section">
 			<div class="container">
 				<!-- Logo & Contact Info -->
 				<div class="row ">
 					<div class="col-md-6 col-sm-12">
-						<div claSS="logo">
+						<div class="logo">
 							<a href="<?php echo home_url( '/' ); ?>"
 								title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
 								rel="home">
@@ -47,42 +47,7 @@
 							<p><?php bloginfo( 'description' ); ?></p>
 						</div>
 					</div>
-				<?php if($wl_theme_options['header_social_media_in_enabled']=='on') { ?>
-				<div class="col-md-6 col-sm-12">
-				<?php if($wl_theme_options['email_id'] || $wl_theme_options['phone_no'] !='') { ?>
-				<ul class="head-contact-info">
-						<?php if($wl_theme_options['email_id'] !='') { ?><li><i
-								class="fa fa-envelope"></i><a
-								href="mailto:<?php echo $wl_theme_options['email_id']; ?>"><?php echo $wl_theme_options['email_id']; ?></a></li><?php } ?>
-						<?php if($wl_theme_options['phone_no'] !='') { ?><li><i
-								class="fa fa-phone"></i><?php echo $wl_theme_options['phone_no']; ?></li><?php } ?>
-				</ul>
-				<?php } ?>
-					<ul class="social">
-					<?php if($wl_theme_options['fb_link']!='') { ?>
-					   <li class="facebook" data-toggle="tooltip"
-								data-placement="bottom" title="Facebook"><a
-								href="<?php echo esc_url($wl_theme_options['fb_link']); ?>"><i
-									class="fa fa-facebook"></i></a></li>
-					<?php } if($wl_theme_options['twitter_link']!='') { ?>
-					<li class="twitter" data-toggle="tooltip" data-placement="bottom"
-								title="Twiiter"><a
-								href="<?php echo esc_url($wl_theme_options['twitter_link']); ?>"><i
-									class="fa fa-twitter"></i></a></li>
-					<?php } if($wl_theme_options['linkedin_link']!='') { ?>					
-					<li class="linkedin" data-toggle="tooltip" data-placement="bottom"
-								title="Linkedin"><a
-								href="<?php echo esc_url($wl_theme_options['linkedin_link']); ?>"><i
-									class="fa fa-linkedin"></i></a></li>
-					<?php } if($wl_theme_options['youtube_link']!='') { ?>
-					<li class="youtube" data-toggle="tooltip" data-placement="bottom"
-								title="Youtube"><a
-								href="<?php echo esc_url($wl_theme_options['youtube_link']) ; ?>"><i
-									class="fa fa-youtube"></i></a></li>
-	                <?php } ?>
-					</ul>
-					</div>
-				<?php } ?>
+				
 			</div>
 				<!-- /Logo & Contact Info -->
 			</div>
@@ -90,7 +55,7 @@
 		<!-- /Header Section -->
 		<!-- Navigation  menus -->
 		<div class="navigation_menu " data-spy="affix" data-offset-top="95"
-			id="enigma_nav_top">
+			id="enigma_nav_top" style="border-color:#e61f18;border-width:thin">
 			<span id="header_shadow"></span>
 			<div class="container navbar-container">
 				<nav class="navbar navbar-default " role="navigation">
@@ -105,7 +70,7 @@
 					</div>
 				<?php
 				
-wp_nav_menu ( array (
+				wp_nav_menu ( array (
 						'menu' => 'primary',
 						'theme_location' => 'primary',
 						'container' => 'div',
@@ -113,7 +78,7 @@ wp_nav_menu ( array (
 						'container_id' => 'menu',
 						'menu_class' => 'nav navbar-nav',
 						'fallback_cb'       => 'wlkr_bootstrap_navwalker::fallback',
-				'walker'            => new wlkr_bootstrap_navwalker())
+						'walker'     => new wlkr_bootstrap_navwalker())
 				); ?>
 			</nav>
 			</div>
