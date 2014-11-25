@@ -1,6 +1,7 @@
 <div class="enigma_blog_area ">
 <?php
 
+
 $wl_theme_options = weblizar_get_options ();
 if ($wl_theme_options ['blog_title'] != '') {
 	?>
@@ -32,7 +33,7 @@ if (have_posts ()) :
 					<div class="enigma_blog_thumb_wrapper_showcase">					
 					<?php
 			
-$img = array (
+		$img = array (
 					'class' => 'enigma_img_responsive' 
 			);
 			if (has_post_thumbnail ()) :
@@ -130,27 +131,31 @@ endwhile
 
 <!-- register form -->
 
-<form role="form">
+<form id='registerForm' role="form" method="post">
 	<div id="leftForm" style="float: left;margin-left: auto;width:45%;margin-bottom:20px">
 	  <div  style="margin-bottom: 50px">
 	    <label for="nameInput" style="float: left;width:15%">姓名：</label>
-	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" id="nameInput" name="name" placeholder="姓名"/>
-	    <font color="#e61f18" style="width: 5%;float:left">*</font>
+	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left"
+	    	onblur='checkName()' id="nameInput" name="name" placeholder="姓名"/>
+	    <font id="nameHint" color="#e61f18" style="width: 5%;float:left">*</font>
 	  </div>
 	  <div  style="margin-bottom: 50px">
 	    <label for="emailInput" style="float: left;width:15%">邮箱：</label>
-	    <input type="email" class="enigma_con_input_control" style="width: 75%;float:left" id="emailInput" name="email" placeholder="邮箱"/>
-	    <font color="#e61f18" style="width: 5%;float:left">*</font>
+	    <input type="email" class="enigma_con_input_control" style="width: 75%;float:left"
+	    	onblur='checkEmail()' id="emailInput" name="email" placeholder="邮箱"/>
+	    <font id="emailHint" color="#e61f18" style="width: 5%;float:left">*</font>
 	  </div>
 	  <div style="margin-bottom: 50px">
 	    <label for="phoneInput" style="width: 15%;float:left">电话：</label>
-	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" id="phoneInput" name="phone" placeholder="电话"/>
-	    <font color="#e61f18" style="width: 5%;float:left">*</font>
+	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left"
+	    	onblur='checkPhone()' id="phoneInput" name="phone" placeholder="电话"/>
+	    <font id="phoneHint" color="#e61f18" style="width: 5%;float:left">*</font>
 	  </div>
 	  <div style="margin-bottom: 50px">
-	    <label for="company"  style="width: 15%;float:left">公司名：</label>
-	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" id="phoneInput" name="company" placeholder="公司名"/>
-	    <font color="#e61f18"  style="width: 5%;float:left">*</font>
+	    <label for="companyInput"  style="width: 15%;float:left">公司名：</label>
+	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" 
+	    	onblur='checkCompany()' id="companyInput" name="company" placeholder="公司名"/>
+	    <font id="companyHint" color="#e61f18"  style="width: 5%;float:left">*</font>
 	  </div>
   </div>
   
@@ -159,9 +164,10 @@ endwhile
 	    <label for="introduction" style="float:left;">简介：</label></br>
 	    <textarea id="introduction" name="introduction" class="enigma_con_textarea_control"
 	    style="float:left;width: 90%; margin-right:3%;height:160px;margin-bottom:20px" 
-	     placeholder="关于自己正从事的事情或者自己的一个简介">
+	     >
 	     </textarea><br/><br/>
-	     <input type="submit" class="enigma_send_button" style="float: left" value="报名"></input>
+	     <input type="button" class="enigma_send_button" style="float: left" value="报名"
+	     	onclick="submitForm()"></input>
 	  </div>
  </div>
 </form>

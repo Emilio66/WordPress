@@ -13,7 +13,7 @@
 	</div>
 <?php } ?>	
 
-<div  style="text-align: center; ">
+<div  class="container" style="text-align: center; ">
 	<div  style="margin-left: auto;margin-right: auto; ">
 		<font>
 		<textarea rows="8" cols="10" class="enigma_con_textarea_control" 

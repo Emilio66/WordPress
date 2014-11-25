@@ -14,6 +14,34 @@ require (WL_TEMPLATE_DIR_CORE . '/scripts/css_js.php'); // Enquiring Resources h
 require (WL_TEMPLATE_DIR_CORE . '/comment-function.php');
 require (WL_TEMPLATE_DIR_CORE . '/flickr-widget.php');
 
+//my ajax submit
+add_action( 'wp_ajax_nopriv_register', 'register' );	//no authentication check
+add_action( 'wp_ajax_register', 'register' );
+
+function register(){
+	/* add register for meeting information to DB */	
+	if(!empty($_POST['name'])){		
+		
+		unset($_POST['action']);
+		
+		if(function_exists(date_default_timezone_set))
+			date_default_timezone_set("Etc/GMT-8");	//这是格林威治标准时间快8小时，东八区，设置'PRC'也是一样
+		
+		$time = date('Y-m-d H:i:s',time($_SERVER['REQUEST_TIME']));
+		$_POST['register_time']=$time;
+		
+		if(isset($wpdb))
+			echo $wpdb->insert('wp_register',$_POST);
+		else{
+			$tmpDB = new wpdb ( DB_USER, DB_PASSWORD, DB_NAME, DB_HOST );
+			echo $tmpDB->insert('wp_register',$_POST);
+		}
+		//echo 'success';
+		exit;
+	}
+	
+}
+
 //remove wordpress logo information
 function wps_admin_bar() {
 	global $wp_admin_bar;
@@ -41,7 +69,7 @@ remove_action ( 'wp_head', 'wp_generator' );
 remove_action ( 'wp_footer', 'wp_print_footer_scripts' );
 remove_action ( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 remove_action ( 'template_redirect', 'wp_shortlink_header', 11, 0 );
-add_action ( 'widgets_init', 'my_remove_recent_comments_style' );
+
 function my_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	remove_action ( 'wp_head', array (
@@ -49,7 +77,7 @@ function my_remove_recent_comments_style() {
 			'recent_comments_style' 
 	) );
 }
-
+add_action ( 'widgets_init', 'my_remove_recent_comments_style' );
 //remove dashboard widgets
 function example_remove_dashboard_widgets() {
 	// Globalize the metaboxes array, this holds all the widgets for wp-admin
