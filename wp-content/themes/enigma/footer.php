@@ -3,34 +3,70 @@
 <!-- Footer Widget Secton -->
 <div class="enigma_footer_widget_area" style="text-align:center"  align="center">
 	<div class="container" style="margin-left:auto; margin-right:auto" align="center" >	
-		<div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in"  >
+		<div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px" >
 		<table  style="border:0;">
 			<tbody><tr>
-				<td style="border:0"><img class='enigma_img_responsive' style="width:120%" alt="闪铃" src="<?php echo esc_attr($wl_theme_options['shining']);?>"></td>
-				<td style="border:0"><img class='enigma_img_responsive' alt="红头帮" style="width:120%" src="<?php echo esc_attr($wl_theme_options['hongtou']);?>"></td>
-				<td style="border:0"><img class='enigma_img_responsive' alt="5TV" style="width:120%" src="<?php echo esc_attr($wl_theme_options['tv5']);?>"></td>
+				<td style="border:0"><img class='enigma_img_responsive' style="width:100%" alt="闪铃" src="<?php echo esc_attr($wl_theme_options['shining']);?>"></td>
+				</TR></TBODY>
+		</TABLE>
+		</DIV>
+	<DIV class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px">
+		<TABLE style="border: 0px currentColor;"><TBODY>
+  			<TR> 
+				<td style="border:0"><img class='enigma_img_responsive' alt="红头帮" style="width:100%" src="<?php echo esc_attr($wl_theme_options['hongtou']);?>"></td>
+				</TR></TBODY>
+		</TABLE>
+	</DIV>
+	<DIV class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px">
+		<TABLE style="border: 0px currentColor;"><TBODY>
+  			<TR> 
+				<td style="border:0"><img class='enigma_img_responsive' alt="5TV" style="width:100%" src="<?php echo esc_attr($wl_theme_options['tv5']);?>"></td>
 				</tr>
 			</tbody>
 		</table>
 	 </div>
 	 
-	 	<div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in"  >
+	 <div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in"  style="width:120px">
 		<table  style="border:0;">
 			<tbody><tr>
-				<td style="border:0"><img class='enigma_img_responsive' alt="蓝色光标" style="width:120%" src="<?php echo esc_attr($wl_theme_options['blueFocus']);?>"></td>
-				<td style="border:0"><img class='enigma_img_responsive' alt="驼帮" style="width:120%" src="<?php echo esc_attr($wl_theme_options['tuobang']);?>"></td>
-				<td style="border:0"><img class='enigma_img_responsive' alt="酷派" style="width:120%" src="<?php echo esc_attr($wl_theme_options['coolpad']);?>"></td>
+				<td style="border:0"><img class='enigma_img_responsive' alt="蓝色光标" style="width:100%" src="<?php echo esc_attr($wl_theme_options['blueFocus']);?>"></td>
+				</TR></TBODY>
+		</TABLE>
+	</DIV>
+	<DIV class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px">
+		<TABLE style="border: 0px currentColor;"><TBODY>
+  			<TR> 
+				<td style="border:0"><img class='enigma_img_responsive' alt="驼帮" style="width:100%" src="<?php echo esc_attr($wl_theme_options['tuobang']);?>"></td>
+				</TR></TBODY>
+		</TABLE>
+	</DIV>
+	<DIV class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px">
+		<TABLE style="border: 0px currentColor;"><TBODY>
+  			<TR> 
+				<td style="border:0"><img class='enigma_img_responsive' alt="酷派" style="width:100%" src="<?php echo esc_attr($wl_theme_options['coolpad']);?>"></td>
 				</tr>
 			</tbody>
 		</table>
 	 </div>
 	 	
-	 	<div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in"  >
+	 	<div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px" >
 		<table  style="border:0;">
 			<tbody><tr>
-				<td style="border:0"><img class='enigma_img_responsive' alt="格瓦拉" style="width:120%" src="<?php echo esc_attr($wl_theme_options['gewara']);?>"></td>			
-				<td style="border:0"><img class='enigma_img_responsive' alt="樽会所" style="width:120%" src="<?php echo esc_attr($wl_theme_options['zunhuisuo']);?>"></td>
-				<td style="border:0"><img class='enigma_img_responsive' alt="陪你看电影" style="width:120%" src="<?php echo esc_attr($wl_theme_options['movie']);?>"></td>
+				<td style="border:0"><img class='enigma_img_responsive' alt="格瓦拉" style="width:100%" src="<?php echo esc_attr($wl_theme_options['gewara']);?>"></td>			
+				</TR></TBODY>
+		</TABLE>
+	</DIV>
+	<DIV class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px">
+		<TABLE style="border: 0px currentColor;"><TBODY>
+  			<TR> 
+				<td style="border:0"><img class='enigma_img_responsive' alt="樽会所" style="width:100%" src="<?php echo esc_attr($wl_theme_options['zunhuisuo']);?>"></td>
+				</TR></TBODY>
+		</TABLE>
+	</DIV>
+	<DIV class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px">
+		<TABLE style="border: 0px currentColor;"><TBODY>
+  			<TR> 
+				<td style="border:0"><img class='enigma_img_responsive' alt="陪你看电影" style="width:100%" src="<?php echo esc_attr($wl_theme_options['movie']);?>"></td>
 				<!-- <td><img class='enigma_img_responsive' alt="时光网" src="<?php echo esc_attr($wl_theme_options['Mtime']);?>"></td> -->
 				</tr>
 			</tbody>

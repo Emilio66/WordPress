@@ -1,4 +1,4 @@
-<div class="enigma_blog_area ">
+<div class="enigma_blog_area " style="background-color:#ECF0F1">
 <?php
 
 
@@ -130,48 +130,64 @@ endwhile
 </div>
 
 <!-- register form -->
-
+<DIV class="enigma_project_section" style="background-color:#FFFFFF">
+	<DIV class="container" id="introduction">
+		<DIV class="row">
+		 <DIV class="col-sm-12">
+			<DIV class="enigma_heading_title">
+			<H3>报名参会</H3>
+			</DIV>
+		 </DIV>
+		</DIV>
+	</DIV>
+<DIV class="container">
 <form id='registerForm' role="form" method="post">
-	<div id="leftForm" style="float: left;margin-left: auto;width:45%;margin-bottom:20px">
+	<DIV class="col-lg-6  col-md-6 col-md-offset-3 col-sm-6 "  >
 	  <div  style="margin-bottom: 50px">
-	    <label for="nameInput" style="float: left;width:15%">姓名：</label>
-	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left"
+	    <label for="nameInput" style="float: left;width:17%">姓名：</label>
+	    <input type="text" class="enigma_con_input_control" style="width: 67%;float:left"
 	    	onblur='checkName()' id="nameInput" name="name" placeholder="姓名"/>
-	    <font id="nameHint" color="#e61f18" style="width: 5%;float:left">*</font>
+	    <font id="nameHint" color="#e61f18" style="width: 12%;float:left">*</font>
+	    <div style="padding: 0px 0px 10px;"></div> 
 	  </div>
 	  <div  style="margin-bottom: 50px">
-	    <label for="emailInput" style="float: left;width:15%">邮箱：</label>
-	    <input type="email" class="enigma_con_input_control" style="width: 75%;float:left"
+	    <label for="emailInput" style="float: left;width:17%">邮箱：</label>
+	    <input type="email" class="enigma_con_input_control" style="width: 67%;float:left"
 	    	onblur='checkEmail()' id="emailInput" name="email" placeholder="邮箱"/>
-	    <font id="emailHint" color="#e61f18" style="width: 5%;float:left">*</font>
+	    <font id="emailHint" color="#e61f18" style="width: 12%;float:left">*</font>
+	    <div style="padding: 0px 0px 10px;"></div> 
 	  </div>
 	  <div style="margin-bottom: 50px">
-	    <label for="phoneInput" style="width: 15%;float:left">电话：</label>
-	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left"
-	    	onblur='checkPhone()' id="phoneInput" name="phone" placeholder="电话"/>
-	    <font id="phoneHint" color="#e61f18" style="width: 5%;float:left">*</font>
+	    <label for="phoneInput" style="width: 17%;float:left">手机：</label>
+	    <input type="text" class="enigma_con_input_control" style="width: 67%;float:left"
+	    	onblur='checkPhone()' id="phoneInput" name="phone" placeholder="手机"/>
+	    <font id="phoneHint" color="#e61f18" style="width: 12%;float:left">*</font>
+	    <div style="padding: 0px 0px 10px;"></div> 
 	  </div>
 	  <div style="margin-bottom: 50px">
-	    <label for="companyInput"  style="width: 15%;float:left">公司名：</label>
-	    <input type="text" class="enigma_con_input_control" style="width: 75%;float:left" 
+	    <label for="companyInput"  style="width: 17%;float:left">公司名：</label>
+	    <input type="text" class="enigma_con_input_control" style="width: 67%;float:left" 
 	    	onblur='checkCompany()' id="companyInput" name="company" placeholder="公司名"/>
-	    <font id="companyHint" color="#e61f18"  style="width: 5%;float:left">*</font>
+	    <font id="companyHint" color="#e61f18"  style="width: 12%;float:left">*</font>
+	    <div style="padding: 0px 0px 10px;"></div> 
 	  </div>
-  </div>
-  
-  <div id="rightForm" style="float: left;margin-right:auto;margin-bottom:20px;width:55%">
+
 	  <div >
-	    <label for="introduction" style="float:left;">简介：</label></br>
+	    <label for="introduction" style="width: 17%;float:left;">简介：</label></br>
 	    <textarea id="introduction" name="introduction" class="enigma_con_textarea_control"
-	    style="float:left;width: 90%; margin-right:3%;height:160px;margin-bottom:20px" 
+	    style="float:left;width: 67%; margin-right:3%;height:160px;margin-bottom:20px" 
 	     >
-	     </textarea><br/><br/>
-	     <input type="button" class="enigma_send_button" style="float: left" value="报名"
+	     </textarea><br/>
+	     <div id='loading' style="display:none">
+	     		<img alt="loading..." style="height: 50px;width:50px" src="/wordpress/wp-admin/images/pageloader.gif">
+	   	 </div>
+	     <input type="button" class="enigma_send_button" value="报名"
 	     	onclick="submitForm()"></input>
 	  </div>
  </div>
 </form>
-
+</DIV>
+ </div>
 
 <div class="enigma_callout_area">
 	<div class="container" id="<?php echo esc_attr($wl_theme_options['register_tag']); ?>">

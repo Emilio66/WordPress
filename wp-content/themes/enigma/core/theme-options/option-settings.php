@@ -10,19 +10,15 @@ $site = home_url ();
 		<div id="heading">
 			<table style="width: 100%;">
 				<tr>
-					<td cols=2><h2><?php _e('常规设置','weblizar');?></h2></td>
+					<td colspan=2><h2><?php _e('常规设置','weblizar');?></h2></td>
 					<td style="width: 30%;">
 						<div class="weblizar_settings_loding"
 							id="weblizar_loding_general_image"></div>
 						<div class="weblizar_settings_massage"
 							id="weblizar_settings_save_general_success"><?php _e('Options Data updated','weblizar');?></div>
-					<!--	<div class="weblizar_settings_massage"
-							id="weblizar_settings_save_general_reset"><?php _e('Options data Reset','weblizar');?></div>
-					  --></td>
+					</td>
 					<td style="text-align: right;">
-						<!--<input class="button" type="button"
-						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('general');">-->
+						
 					<input
 						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('general')">  
@@ -31,60 +27,7 @@ $site = home_url ();
 			</table>
 		</div>
 		
-		<!-- 
-		<div class="section">
-			<div class="panel-group" id="accordion">
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapseOne">
-						 <?php _e('Theme Color Schemes','weblizar'); ?>
-						</a> <a href="<?php echo $get_pro_url; ?>" target="_blank"
-								class="btn btn-info  btn_upsell"><?php echo $get_pro; ?></a>
-						</h4>
-					</div>
-
-					<div id="collapseOne" class="panel-collapse collapse in">
-						<div class="panel-body">
-						<?php $stylesheet= ' ' ;?>
-						<select id="style_sheet" name="style_sheet" class="_inpute">
-								<option <?php echo selected($stylesheet, 'light-blue.css' ); ?>
-									value="light-blue.css"><?php _e('light-blue','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'green.css' ); ?>
-									value="green.css"><?php _e('green','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'red.css' ); ?>
-									value="red.css"><?php _e('red','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'pink.css' ); ?>
-									value="pink.css"><?php _e('pink','weblizar'); ?></option>
-								<option
-									<?php echo selected($stylesheet, 'light-purple.css' ); ?>
-									value="light-purple.css"><?php _e('light-purple','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'orange.css' ); ?>
-									value="orange.css"><?php _e('orange','weblizar'); ?></option>
-								<option
-									<?php echo selected($stylesheet, 'bright-green.css' ); ?>
-									value="bright-green.css"><?php _e('bright-green','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'dark-blue.css' ); ?>
-									value="dark-blue.css"><?php _e('dark-blue','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'oil.css' ); ?>
-									value="oil.css"><?php _e('oil','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'black.css' ); ?>
-									value="black.css"><?php _e('black','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'light-brown.css' ); ?>
-									value="light-brown.css"><?php _e('light-brown','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'coffee.css' ); ?>
-									value="coffee.css"><?php _e('coffee','weblizar'); ?></option>
-								<option <?php echo selected($stylesheet, 'flat-blue.css' ); ?>
-									value="flat-blue.css"><?php _e('flat-blue','weblizar'); ?></option>
-							</select> <span class="explain"><?php  _e('Select OUT of 10+ Color Schemes','weblizar'); ?></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		 -->
+		
 		<div class="section">
 			<h3><?php _e('Custom Logo','weblizar'); ?></h3>
 			<input class="weblizar_inpute" type="text"
@@ -117,27 +60,7 @@ $site = home_url ();
 				id="text_title" name="text_title"> <span class="explain"><?php _e('Enable text-based Site Title.   Setup title','weblizar');?> <a
 				href="<?php echo home_url( '/' ); ?>wp-admin/options-general.php"><?php _e('Click Here','weblizar');?></a>.</span>
 		</div>
-		<div class="section">
-			<h3><?php _e('Custom Favicon','weblizar'); ?></h3>
-			<input class="weblizar_inpute" type="text"
-				value="<?php if($wl_theme_options['upload_image_favicon']!='') { echo esc_attr($wl_theme_options['upload_image_favicon']); } ?>"
-				id="upload_image_favicon" name="upload_image_favicon" size="36"
-				class="upload has-file" /> <input type="button" id="upload_button"
-				value="Favicon Icon" class="upload_image_button" /><br> <span
-				class="explain"><?php  _e('Make sure you upload .icon image type which is not more then 25X25 px.','weblizar');?></span>
-			<?php if($wl_theme_options['upload_image_favicon']!='') { ?>
-			<p>
-				<img style="height: 60px; width: 100px;"
-					src="<?php  echo esc_attr($wl_theme_options['upload_image_favicon']);  ?>" />
-			</p>
-			<?php } ?>
-		</div>
-		<div class="section">
-			<h3><?php _e('Custom css','weblizar'); ?></h3>
-			<textarea rows="8" cols="8" id="custom_css" name="custom_css"><?php if($wl_theme_options['custom_css']!='') { echo esc_attr($wl_theme_options['custom_css']); } ?></textarea>
-			<div class="explain"><?php _e('This is a powerful feature provided here. No need to use custom css plugin, just paste your css code and see the magic.','weblizar'); ?><br>
-			</div>
-		</div>
+		
 		<div class="section">
 			<h3><?php _e('Home-Blog Heading','weblizar'); ?></h3>
 			<input class="weblizar_inpute" type="text" name="blog_title"
@@ -148,9 +71,6 @@ $site = home_url ();
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_general"
 				name="weblizar_settings_save_general" /> 
-			<!-- 	<input class="button"
-				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('general');">  -->
 				<input
 				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('general')">
@@ -341,31 +261,7 @@ $site = home_url ();
 				</div>
 			</div>
 		</div>
-	<!--	<div class="section">
-			<div class="panel-group" id="accordion1">
-
-				<div class="panel panel-default">
-					<div class="panel-heading">
-
-						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapsetwo">
-					 <?php _e('More Slides','weblizar'); ?>
-					</a> <a href="<?php echo $get_pro_url; ?>" target="_blank"
-								class="btn btn-info  btn_upsell"><?php echo $get_pro; ?></a>
-						</h4>
-
-					</div>
-
-					<div id="collapsetwo" class="panel-collapse collapse in">
-						<div class="panel-body">
-							<span class="explain"><?php  _e('Add Unlimited slides for your sideshow ','weblizar'); ?></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		-->
+	
 		<!---Save DATA -->
 
 		<div id="button_section">
@@ -398,10 +294,7 @@ $site = home_url ();
 					</td>
 					<td style="text-align: right;">
 					
-						<!-- <input class="button" type="button"
-						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('portfolio-settings');">
-					 -->	<input
+					<input
 						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('portfolio-settings')">
 						
@@ -633,10 +526,7 @@ $site = home_url ();
 							id="weblizar_settings_save_home-service_reset"><?php _e('Options data Reset','weblizar');?></div>
 					</td>
 					<td style="text-align: right;">
-					<!-- <input class="button" type="button"
-						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('home-service');"> 
-						 --><input
+					<input
 						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('home-service')"></td>
 				</tr>
@@ -774,27 +664,7 @@ $site = home_url ();
 				</div>
 			</div>
 		</div>
-		<!-- <div class="section">
-			<div class="panel-group" id="accordion3">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion"
-								href="#collapsefour">
-					 <?php _e('More Services','weblizar'); ?>
-					</a> <a href="<?php echo $get_pro_url; ?>" target="_blank"
-								class="btn btn-info  btn_upsell"><?php echo $get_pro; ?></a>
-						</h4>
-					</div>
-
-					<div id="collapsefour" class="panel-collapse collapse in">
-						<div class="panel-body">
-							<span class="explain"><?php  _e('Add More Services on your Home Page.','weblizar'); ?></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
+		
 		<div id="button_section">
 			<input type="hidden" value="1"
 				id="weblizar_settings_save_home-service"
@@ -811,6 +681,7 @@ $site = home_url ();
 </div>
 
 <!-------- Social media link settings ----------->
+<!-- 
 <div class="block ui-tabs-panel deactive" id="option-social">
 	<form method="post" id="weblizar_theme_options_social">
 		<div id="heading">
@@ -826,9 +697,7 @@ $site = home_url ();
 							id="weblizar_settings_save_social_reset"><?php _e('Options data Reset','weblizar');?></div>
 					</td>
 					<td style="text-align: right;">
-					<!-- <input class="button" type="button"
-						name="reset" value="Restore Defaults"
-						onclick="weblizar_option_data_reset('social');"> -->
+					
 						 <input
 						class="button button-primary" type="button" value="Save"
 						onclick="weblizar_option_data_save('social')"></td>
@@ -891,16 +760,14 @@ $site = home_url ();
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_social"
 				name="weblizar_settings_save_social" />
-				<!--  <input class="button"
-				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('social');">  -->
+				
 				<input
 				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('social')">
 		</div>
 	</form>
 </div>
-
+ -->
 <!---------------- footer customization Settings form ------------------------>
 <div class="block ui-tabs-panel deactive" id="option-footer">
 	<form method="post" id="weblizar_theme_options_footer">
@@ -957,9 +824,7 @@ $site = home_url ();
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_footer"
 				name="weblizar_settings_save_footer" />
-				<!-- <input class="button"
-				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('footer');">  -->
+				
 				 <input
 				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('footer')">
@@ -1015,9 +880,7 @@ $site = home_url ();
 		<div id="button_section">
 			<input type="hidden" value="1" id="weblizar_settings_save_footercall"
 				name="weblizar_settings_save_footercall" />
-				<!-- <input class="button"
-				type="button" name="reset" value="Restore Defaults"
-				onclick="weblizar_option_data_reset('footercall');">  --> 
+				
 				<input
 				class="button button-primary" type="button" value="Save"
 				onclick="weblizar_option_data_save('footercall')">
@@ -1025,755 +888,3 @@ $site = home_url ();
 	</form>
 </div>
 <!---------------- footer customization Settings form ------------------------>
-<?php
-
-$demo = home_url ();
-$purchase = home_url ();
-$theme_name = "Enigma";
-?>
-<div class="block ui-tabs-panel deactive" id="option-getpro">
-	<div class="plan-name">
-		<h2><?php echo $theme_name ;?> Pro Responsive WordPress Theme</h2>
-		<h6>Get The Premium <?php echo $theme_name ;?> in Just <span>$39</span>
-		</h6>
-	</div>
-	<div class="plan-name centre">
-		<h2><?php echo $theme_name; ?> Pro And Free Comparison Table</h2>
-	</div>
-	<div class="row-fluid pricing-table pricing-three-column">
-		<div class="col-md-4">
-			<div class=" plan ap">
-				<div class="plan-name">
-					<h2><?php echo $theme_name; ?> Feature</h2>
-
-				</div>
-				<ul>
-					<li class="plan-feature">Easy to customize</li>
-					<li class="plan-feature">Awesome Slider</li>
-					<li class="plan-feature">Multi Color</li>
-					<li class="plan-feature">Boxed & Wide</li>
-					<li class="plan-feature">Widgetized Footer</li>
-					<li class="plan-feature">Custom Widgets</li>
-					<li class="plan-feature">Shortcode</li>
-					<li class="plan-feature">Page Templates</li>
-					<li class="plan-feature">Quick Support</li>
-					<li class="plan-feature">Custom CSS</li>
-					<li class="plan-feature">Custom Background</li>
-					<li class="plan-feature">Logo & Header text</li>
-					<li class="plan-feature">Portfolio Template with Isotop</li>
-					<li class="plan-feature">Photobox and Lightbox enable Tamplates</li>
-					<li class="plan-feature">Special Gallery Template</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class=" plan bp">
-				<div class="plan-name">
-					<h2>Free</h2>
-
-				</div>
-				<ul>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature">1</li>
-					<li class="plan-feature">WPORG Support</li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-times fa-1x"></i></li>
-
-					<li class="plan-feature"><a href="#"
-						class="button button-primary button-hero"
-						style="font-size: large; font-weight: bolder;"><i
-							class="fa fa-thumbs-up"></i> Enjoy Theme</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="col-md-4">
-			<div class=" plan cp">
-				<div class="plan-name">
-					<h2>Pro - ( $39 )</h2>
-
-				</div>
-				<ul>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature">10</li>
-					<li class="plan-feature">15</li>
-					<li class="plan-feature">Private Support Forum</li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><i class="fa fa-check fa-1x"></i></li>
-					<li class="plan-feature"><a class="btn btn-primary btn-lg"
-						href="<?php echo $demo ;?>" target="_new"
-						style="font-size: large; font-weight: bolder;"><i
-							class="fa fa-check-circle"></i> Demo</a> <a
-						class="btn btn-danger btn-lg" href="<?php echo $purchase ;?>"
-						target="_new" style="font-size: large; font-weight: bolder;"><i
-							class="fa fa-shopping-cart"></i> Buy</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<style>
-.pricing-table .plan ul li.plan-feature {
-	padding: 8px !important;
-}
-
-.ap .plan-name {
-	background-color: #1E8CBE !important;
-}
-
-.bp .plan-name {
-	background-color: #1E8CBE !important;
-}
-
-.cp .plan-name {
-	background-color: #1E8CBE !important;
-}
-
-li {
-	font-size: larger !important;
-}
-
-.row-fluid .span4 {
-	width: 30.624% !important;
-}
-
-ul li img {
-	
-}
-</style>
-</div>
-<div class="block ui-tabs-panel deactive" id="option-ourproduct">
-	<div class="row-fluid pricing-table pricing-three-column">
-		<div class="plan-name centre">
-			<a style="margin-bottom: 10px; textt-align: center" target="_new"
-				href=<?php echo home_url ()?>>
-				<img
-				src="" /></a>
-			<div class="purchase_btn_div">
-				<a href="<?php echo $site ;?>" target="_new"
-					class="btn btn-primary btn-lg dmobtn">View Site</a>
-			</div>
-		</div>
-		<div class="plan-name">
-			<h2>Weblizar's Responsive Wordpress Theme</h2>
-			<h6>Get The Premium, And Create your website Beautifully.</h6>
-		</div>
-
-
-		<div class="col-md-4  demoftr ">
-			<h2>Enigma-Pro</h2>
-			<div class="img-wrapper">
-				<div class="enigma_home_portfolio_showcase">
-					<img class="enigma_img_responsive ftr_img"
-						src="<?php echo WL_TEMPLATE_DIR_URI.'/core/theme-options/images/enigma.png' ;?>">
-					<div class="enigma_home_portfolio_showcase_overlay">
-						<div class="enigma_home_portfolio_showcase_overlay_inner ">
-							<div class="enigma_home_portfolio_showcase_icons">
-								<a title="Link" data-toggle="modal" data-target="#myModal"
-									href="View Detail#">View Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal  -->
-		<div class="modal " id="myModal" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content ">
-					<div class="modal-header ">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">
-							<a class="pro-dir-button" data-toggle="modal"
-								data-target="#myModalGreen" data-dismiss="modal"
-								href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-right fa-2x"></i></a>
-						</h4>
-					</div>
-					<div class="modal-body">
-						<div class="col-md-6">
-							<img class="enigma_img_responsive ftr_img"
-								src="<?php echo WL_TEMPLATE_DIR_URI.'/core/theme-options/images/enigma.png' ;?>">
-						</div>
-						<div class="col-md-6">
-							<div class="theme-info">
-								<h3 class="theme-name">Enigma Pro Theme</h3>
-								<h4 class="theme-author">
-									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
-								</h4>
-								<p class="theme-description">Enigma is HTML5 & CSS3 Responsive
-									WordPress Business theme with business style , 7 blog templates
-									, 6 portfolio templates and many more</p>
-								<h4 style="margin-top: 20px;">Features</h4>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>Responsive Design
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Retina Ready
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Html5 & Css3
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Multi-purpose Theme
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Unlimited Color Schemes
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Multiple Templates
-										</p>
-
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>All Browser Support
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Powerful Option Panel
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Coming Soon Mode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Custom Shortcode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Isotope Effects and lightbox
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Fast & Friendly Support
-										</p>
-									</div>
-								</div>
-								<div class="col-md-12" style="margin-top: 20px;">
-									<a class="btn btn-success btn-lg" target="_new"
-										href=home_url ()>View Demo</a>&nbsp;&nbsp;
-									<a class="btn btn-danger btn-lg" target="_new"
-										href=home_url ()>Purchase Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="col-md-4  demoftr ">
-			<h2>Green Lantern Pro</h2>
-			<div class="img-wrapper">
-				<div class="enigma_home_portfolio_showcase">
-					<img class="enigma_img_responsive ftr_img"
-						src="">
-					<div class="enigma_home_portfolio_showcase_overlay">
-						<div class="enigma_home_portfolio_showcase_overlay_inner ">
-							<div class="enigma_home_portfolio_showcase_icons">
-								<a title="Link" data-toggle="modal" data-target="#myModalGreen"
-									href="View Detail#">View Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal  -->
-		<div class="modal" id="myModalGreen" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content ">
-					<div class="modal-header ">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">
-							<a data-toggle="modal" data-target="#myModal"
-								data-dismiss="modal" href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-left fa-2x"></i></a> <a data-toggle="modal"
-								data-target="#myModalweblizar" data-dismiss="modal"
-								href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-right fa-2x"></i></a>
-						</h4>
-					</div>
-					<div class="modal-body">
-						<div class="col-md-6">
-							<img class="enigma_img_responsive ftr_img"
-								src="#g">
-						</div>
-						<div class="col-md-6">
-							<div class="theme-info">
-								<h3 class="theme-name">Green Lantern Pro Theme</h3>
-								<h4 class="theme-author">
-									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
-								</h4>
-								<p class="theme-description">Green Lantern is a Full Responsive
-									Multi-Purpose Theme suitable for Business , corporate office
-									amd others .Cool Blog Layout and full width page also present</p>
-								<h4 style="margin-top: 20px;">Features</h4>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>Responsive Design
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Retina Ready
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Html5 & Css3
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Multi-purpose Theme
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Unlimited Color Schemes
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Multiple Templates
-										</p>
-
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>All Browser Support
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Powerful Option Panel
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Coming Soon Mode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Custom Shortcode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Isotope Effects and lightbox
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Fast & Friendly Support
-										</p>
-									</div>
-								</div>
-								<p></p>
-								<div class="col-md-12" style="margin-top: 20px;">
-									<a class="btn btn-success btn-lg" target="_new"
-										href="#">View Demo</a>&nbsp;&nbsp;
-									<a class="btn btn-danger btn-lg" target="_new"
-										href="#">Purchase
-										Now</a>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="col-md-4 demoftr ">
-			<h2>Weblizar Pro</h2>
-			<div class="img-wrapper">
-				<div class="enigma_home_portfolio_showcase">
-					<img class="enigma_img_responsive ftr_img"
-						src="">
-					<div class="enigma_home_portfolio_showcase_overlay">
-						<div class="enigma_home_portfolio_showcase_overlay_inner ">
-							<div class="enigma_home_portfolio_showcase_icons">
-								<a title="Link" data-toggle="modal"
-									data-target="#myModalweblizar" href="View Detail#">View Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modal  -->
-		<div class="modal" id="myModalweblizar" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content ">
-					<div class="modal-header ">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">
-							<a data-toggle="modal" data-target="#myModalGreen"
-								data-dismiss="modal" href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-left fa-2x"></i></a> <a data-toggle="modal"
-								data-target="#myModallightbox" data-dismiss="modal"
-								href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-right fa-2x"></i></a>
-						</h4>
-					</div>
-					<div class="modal-body">
-						<div class="col-md-6">
-							<img class="enigma_img_responsive ftr_img"
-								src="">
-						</div>
-						<div class="col-md-6">
-							<div class="theme-info">
-								<h3 class="theme-name">Weblizar Pro Theme</h3>
-								<h4 class="theme-author">
-									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
-								</h4>
-								<p class="theme-description">Responsive Multi-Purpose Theme
-									suitable for Business , corporate office and others .Cool Blog
-									Layout and full width page.You can also use it for portfolio,
-									blogging or any type of site. Built with Twitter bootstrap</p>
-								<h4 style="margin-top: 20px;">Features</h4>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>Responsive Design
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Retina Ready
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Html5 & Css3
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Multi-purpose Theme
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Unlimited Color Schemes
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Multiple Templates
-										</p>
-
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>All Browser Support
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Powerful Option Panel
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Coming Soon Mode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Custom Shortcode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Isotope Effects and lightbox
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Fast & Friendly Support
-										</p>
-									</div>
-								</div>
-								<p></p>
-								<div class="col-md-12" style="margin-top: 20px;">
-									<a class="btn btn-success btn-lg" target="_new"
-										href="#">View Demo</a>&nbsp;&nbsp;
-									<a class="btn btn-danger btn-lg" target="_new"
-										href="#">Purchase
-										Now</a>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-
-
-	<div class="row-fluid pricing-table pricing-three-column">
-		<div class="plan-name">
-			<h2>Weblizar's Responsive Wordpress Plugins</h2>
-			<h6>Get the Plugin and create beautiful Galleries and Slideshow.</h6>
-		</div>
-		<div class="col-md-6 demoftr">
-			<h2>Lightbox Slider Pro</h2>
-			<div class="img-wrapper">
-				<div class="enigma_home_portfolio_showcase">
-					<img class="enigma_img_responsive ftr_img"
-						src="">
-					<div class="enigma_home_portfolio_showcase_overlay">
-						<div class="enigma_home_portfolio_showcase_overlay_inner ">
-							<div class="enigma_home_portfolio_showcase_icons">
-								<a title="Link" data-toggle="modal"
-									data-target="#myModallightbox" href="View Detail#">View Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<!-- Modal  -->
-		<div class="modal " id="myModallightbox" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content ">
-					<div class="modal-header ">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">
-							<a class="pro-dir-button" data-toggle="modal"
-								data-target="#myModalweblizar" data-dismiss="modal"
-								href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-left fa-2x"></i></a> <a
-								class="pro-dir-button" data-toggle="modal"
-								data-target="#myModalresponsive" data-dismiss="modal"
-								href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-right fa-2x"></i></a>
-						</h4>
-					</div>
-					<div class="modal-body">
-						<div class="col-md-6">
-							<img class="enigma_img_responsive ftr_img"
-								src="">
-						</div>
-						<div class="col-md-6">
-							<div class="theme-info">
-								<h3 class="theme-name">LightBox Slider Pro</h3>
-								<h4 class="theme-author">
-									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
-								</h4>
-								<p class="theme-description">Lightbox Slider is premium
-									wordpress plugin to create gallery with lightbox slide</p>
-								<h4 style="margin-top: 20px;">Features</h4>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>Responsive Design
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Ultimate Lightbox
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>5 Gallery Layout
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>500+ Fonts Styles
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>10 Color Opacity
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>8 Lightbox
-										</p>
-
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>Gallery Shortcode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Unlimited Color Schemes
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Retina Ready
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Isotope Effects
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>All Browser Support
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Fast & Friendly Support
-										</p>
-									</div>
-								</div>
-								<div class="col-md-12" style="margin-top: 20px;">
-									<a class="btn btn-success btn-lg" target="_new"
-										href="#">View Demo</a>&nbsp;&nbsp;
-									<a class="btn btn-danger btn-lg" target="_new"
-										href="#">Purchase Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-6 demoftr">
-			<h2>Reponsive Photo Gallery</h2>
-			<div class="img-wrapper">
-				<div class="enigma_home_portfolio_showcase">
-					<img class="enigma_img_responsive ftr_img"
-						src="">
-					<div class="enigma_home_portfolio_showcase_overlay">
-						<div class="enigma_home_portfolio_showcase_overlay_inner ">
-							<div class="enigma_home_portfolio_showcase_icons">
-								<a title="Link" data-toggle="modal"
-									data-target="#myModalresponsive" href="View Detail#">View
-									Detail</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<!-- Modal  -->
-		<div class="modal " id="myModalresponsive" tabindex="-1" role="dialog"
-			aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content ">
-					<div class="modal-header ">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">
-							<a class="pro-dir-button" data-toggle="modal"
-								data-target="#myModallightbox" data-dismiss="modal"
-								href="View Detail#" class="pro-dir-button"><i
-								style="color: #000; line-height: 1.5"
-								class="fa fa-angle-left fa-2x"></i></a>
-						</h4>
-					</div>
-					<div class="modal-body">
-						<div class="col-md-6">
-							<img class="enigma_img_responsive ftr_img"
-								src="#">
-						</div>
-						<div class="col-md-6">
-							<div class="theme-info">
-								<h3 class="theme-name">Responsive Photo Gallery</h3>
-								<h4 class="theme-author">
-									By <a href=<?php home_url () ?> title="Visit author homepage">weblizar</a>
-								</h4>
-								<p class="theme-description">A Highly Animated Image Gallery
-									Plugin For WordPress</p>
-								<h4 style="margin-top: 20px;">Features</h4>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>Responsive Design
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>8 Animation Effect
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>5 Gallery Layout
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>500+ Fonts Styles
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>10 Color Opacity
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>2 Lightbox
-										</p>
-
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="enigma_sidebar_link">
-										<p>
-											<i class="fa fa-angle-right"></i>Gallery Shortcode
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Unlimited Color Schemes
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Retina Ready
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Isotope Effects
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>All Browser Support
-										</p>
-										<p>
-											<i class="fa fa-angle-right"></i>Fast & Friendly Support
-										</p>
-									</div>
-								</div>
-								<div class="col-md-12" style="margin-top: 20px;">
-									<a class="btn btn-success btn-lg" target="_new"
-										href="#">View
-										Demo</a>&nbsp;&nbsp; <a class="btn btn-danger btn-lg"
-										target="_new"
-										href="#">Purchase
-										Now</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-	</div>
-	<div class="plan-name centre">
-		<div class="purchase_btn_div">
-			<a href="<?php echo $site ;?>" target="_new"
-				class="btn btn-primary btn-lg dmobtn">View Site</a>
-		</div>
-	</div>
-</div>

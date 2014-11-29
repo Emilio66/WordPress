@@ -16,7 +16,7 @@
 				 success : function(data)
 				 {  jQuery(weblizar_loding_image).fadeOut();						
 					jQuery(weblizar_settings_save_success).show();
-					jQuery(weblizar_settings_save_success).fadeOut(5000);
+					jQuery(weblizar_settings_save_success).fadeOut(2000);
 				}			
 		});
 	}	
@@ -106,18 +106,3 @@
 	});
 });
 
-
-
-
-/****  For Option panle facebook Like ******/
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-/****  For Option panle twitter follower and Like ******/
-
-//!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

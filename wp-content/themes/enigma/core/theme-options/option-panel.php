@@ -35,59 +35,7 @@ function weblizar_option_panal_function() {
 	$purchase = home_url ();
 	?>
 <div class="wrap" id="weblizar_wrap">
-	<!--  <div class="wbl-notify" id="wbl-notify">
-		<div class="col-md-12">
-			<div class="col-md-2 col-sm-6">
-				<h1 style="text-decoration: underline; margin-bottom: 40px;"><?php echo $theme_name; ?></h1>
-				<a style="margin-bottom: 20px" href="<?php echo $purchase; ?>"
-					target="blank" class="btn btn-success btn-lg"><?php _e('View Enigma Pro Demo','weblizar'); ?> </a>
-				<a href="<?php echo $purchase; ?>" target="_blank"
-					class="btn btn-danger btn-lg"><?php _e('Upgrade to Enigma Pro','weblizar'); ?></a>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<h3
-					style="margin-top: 30px; margin-left: 40px; text-decoration: underline; color: #fff;">Features</h3>
-				<ul style="padding-top: 20px">
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Responsive Design','weblizar'); ?> </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('More than 13 Templates','weblizar'); ?> </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('8 Different Types of Blog Templates','weblizar'); ?> </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('6 Types of Portfolio Templates','weblizar'); ?></li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('12 types Themes Colors Scheme','weblizar'); ?></li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Patterns Background','weblizar'); ?>   </li>
-
-				</ul>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<ul style="padding-top: 47px">
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Image Background','weblizar'); ?>  </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Image Background','weblizar'); ?>  </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Ultimate Portfolio layout with Isotope effect','weblizar'); ?> </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Rich Short codes','weblizar'); ?> </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Translation Ready','weblizar'); ?> </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Coming Soon Mode','weblizar'); ?>  </li>
-					<li style="float: none; margin-left: 40px;">
-						<div class="dashicons dashicons-yes"></div> <?php _e('Extreme Gallery Design Layout','weblizar'); ?>  </li>
-				</ul>
-			</div>
-			<div class="col-md-4 col-sm-6">
-				<img class="enigma_img_responsive "
-					src="<?php echo WL_TEMPLATE_DIR_URI .'/core/theme-options/images/Enig.png'?>">
-
-			</div>
-		</div>
-	</div>  -->
+	
 	<h2>
 		<span></span>
 	</h2>
@@ -96,45 +44,21 @@ function weblizar_option_panal_function() {
 			<h2>
 				<span><?php _e('主题设定','weblizar'); ?></span>
 			</h2>
-			<div class="weblizar-submenu-links" id="weblizar-submenu-links">
-				<ul>
-					<!-- <li class=""> <div class="dashicons dashicons-format-aside"> </div> <a href="#" target="_blank" title="Documentation"><?php _e('Documentation','weblizar'); ?></a></li>
-					<li class="">
-						<div class="dashicons dashicons-format-chat"></div> <a
-						href="#" target="_blank"
-						title="Support Forum"><?php _e('Support Forum','weblizar'); ?></a>
-					</li>
-					<li class="">
-						<div class="dashicons dashicons-welcome-write-blog"></div> <a
-						href="<?php echo get_template_directory_uri() . '/readme.txt'?>"
-						target="_blank" title="Theme Changelog"><?php _e('View Changelog','weblizar'); ?></a>
-					</li> -->
-				</ul>
-			</div>
 		</div>
 		<div id="content">
 			<div id="options_tabs" class="ui-tabs ">
 				<ul class="options_tabs ui-tabs-nav" role="tablist" id="nav">
-					<li class="active"><a href="#" id="general"><div
-								class="dashicons dashicons-admin-home"></div><?php _e('Home Option','weblizar');?></a>
+					<li class="active">
+						<a href="#" id="general">
+						<div class="dashicons dashicons-admin-home"></div><?php _e('Home Option','weblizar');?></a>
 						<ul>
 							<li class="currunt"><a href="#" class="ui-tabs-anchor"
 								id="general"><?php _e('常规设置','weblizar');?> </a></li>
 							<li><a href="#" id="home-image"><?php _e('大屏滚图','weblizar');?></a></li>
 							<li><a href="#" id="home-service"><?php _e('关于Movie2.0','weblizar');?></a></li>
-							<li><a href="#" id="portfolio-settings"><?php _e('大会嘉宾','weblizar');?></a></li>
+						<!--	<li><a href="#" id="portfolio-settings"><?php // _e('大会嘉宾','weblizar');?></a></li>  -->
 							<li><a href="#" id="footercall"><?php _e('页脚标语','weblizar');?></a></li>
-						</ul></li>
-					<!-- <li><a href="#" id="social"><div
-								class="dashicons dashicons-twitter"></div><?php _e('Social Media','weblizar');?></a></li>
-					<li><a href="#" id="footer"><div
-								class="dashicons dashicons-media-text"></div><?php _e('Footer Option','weblizar');?></a></li>
-					<li><a href="#" id="getpro"
-						style="background-color: #141414; color: #F8F3F3;"><div
-								class="dashicons dashicons-cart"></div><?php _e('Get Premium','weblizar');?></a></li>
-					<li><a href="#" id="ourproduct"><div
-								class="dashicons dashicons-plus"></div><?php _e('More Products','weblizar');?></a></li>
- 					-->
+						</ul></li>			
 				</ul>
 				<!--------Option Data saving ------->
 					<?php require_once('option-data.php'); ?>	

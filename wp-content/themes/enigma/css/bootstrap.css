@@ -5585,7 +5585,7 @@ button.close {
 	position: absolute;
 	z-index: 1030;
 	display: block;
-	font-size: 12px;
+	font-size: 30px;
 	line-height: 1.4;
 	visibility: visible;
 	filter: alpha(opacity = 0);

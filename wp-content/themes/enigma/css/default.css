@@ -386,7 +386,7 @@
 
 .enigma_send_button,#enigma_send_button {
 	border-color: #e61f18;
-	color: #6a6a6a;
+	color:#e61f18;
 	background-color: #ffffff;
 	background-size: 100% 200%;
 	background-image: linear-gradient(to bottom, #fff 50%, #e61f18 50%);

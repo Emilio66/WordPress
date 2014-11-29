@@ -1,6 +1,6 @@
 <!-- portfolio section -->
 <?php $wl_theme_options = weblizar_get_options(); ?>
-<div class="enigma_project_section">
+<div class="enigma_project_section" style="background-color:#ECF0F1">
 <?php if($wl_theme_options['port_heading'] !='') { ?>
 	<div class="container" id="<?php echo esc_attr($wl_theme_options['portfolio_tag']); ?>">
 		<div class="row">
@@ -13,11 +13,12 @@
 	</div>
 <?php } ?>	
 
-<div  class="container" style="text-align: center; ">
-	<div  style="margin-left: auto;margin-right: auto; ">
+<div  class="container" style="text-align: center; margin:auto ">
+	<div  class="row" style="text-align:center; margin:auto ">
+		<DIV class="col-lg-4  col-md-4 col-md-offset-2 col-sm-6 "  >
 		<font>
 		<textarea rows="8" cols="10" class="enigma_con_textarea_control" 
-			style="float:left;width: 40%; margin-left:5%;margin-right:3%;height:400px;"  disabled="disabled">
+			style="height:300px;"  disabled="disabled">
 			流程:
 	1  主题演讲：互联网时代的影视行业变革
 	2  创作者作品展示，分享创作经验
@@ -28,11 +29,13 @@
 	7  抽奖活动（一步之遥电影票，红酒）	
 		
 		</textarea></font>
+		<DIV  style="padding: 0px 0px 15px;"></DIV>
 	</div>
-	<div  style="margin-left: auto;margin-right: auto;margin-bottom:30px; ">		
-		<img alt="樽会所" class='enigma_img_responsive' style="width: 45%;height:400px;float: left; margin-right:5%"
-		 src="<?php echo esc_attr($wl_theme_options['place']); ?>"/>
-	
+	<DIV class="col-lg-4 col-md-4 col-sm-6 " ><a href="#zunhuisuo" data-toggle="tooltip" data-placement="auto" title="樽会所" >
+				<IMG class="enigma_img_responsive"  name="zunhuisuo" style=" width:100%; height:300px;" alt="樽会所"
+		 src="<?php echo esc_attr($wl_theme_options['place']); ?>"/></a>
+		</div>
+	</div>
 	</div>
 </div>
 
@@ -47,9 +50,16 @@
 <?php //endif; ?>
 </div>
  -->
-<div class="container">
-		<div class="row" style="margin-top: 30px;">
-			<h3>与会嘉宾</h3>
+	
+
+<DIV class="enigma_project_section"  style="background-color:#FFFFFF">
+	<div class="container">
+		<DIV class="row">
+	<DIV class="col-sm-12">
+		<DIV class="enigma_heading_title">
+		<H3>与会嘉宾</H3></DIV></DIV></DIV></DIV>
+		<DIV class="container">
+	<DIV class="row">
 			<div id="enigma_portfolio_section" class="enima_photo_gallery">
 			<?php
 			
