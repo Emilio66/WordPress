@@ -1,11 +1,9 @@
-<div class="enigma_blog_area " style="background-color:#ECF0F1">
 <?php
-
-
-$wl_theme_options = weblizar_get_options ();
-if ($wl_theme_options ['blog_title'] != '') {
-	?>
-	<div class="container" id="<?php echo esc_attr($wl_theme_options['blog_tag']); ?>">
+	$wl_theme_options = weblizar_get_options ();
+?>
+<div class="enigma_blog_area " style="background-color:#ECF0F1"
+ id="<?php echo esc_attr($wl_theme_options['blog_tag']); ?>">
+	<div class="container" >
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="enigma_heading_title">
@@ -14,7 +12,7 @@ if ($wl_theme_options ['blog_title'] != '') {
 			</div>
 		</div>
 	</div>
-	<?php } ?>
+
 	<div class="container">
 		<div class="row" id="enigma_blog_section">
 	<?php
@@ -62,7 +60,8 @@ if (have_posts ()) :
 					<div class="enigma_blog_thumb_footer">
 						<ul class="enigma_blog_thumb_date">
 							<li><i class="fa fa-user"></i><a
-								href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_the_author(); ?></a></li>
+								href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+								<?php echo get_the_author(); ?></a></li>
 							<li><i class="fa fa-clock-o"></i>
 						<?php if ( ('d M  y') == get_option( 'date_format' ) ) : ?>
 						<?php echo get_the_date('F d ,Y'); ?>
@@ -130,8 +129,9 @@ endwhile
 </div>
 
 <!-- register form -->
-<DIV class="enigma_project_section" style="background-color:#FFFFFF">
-	<DIV class="container" id="introduction">
+<DIV class="enigma_project_section" 
+style="background-color:#FFFFFF" id="<?php echo esc_attr($wl_theme_options['register_tag']); ?>">
+	<DIV class="container" >
 		<DIV class="row">
 		 <DIV class="col-sm-12">
 			<DIV class="enigma_heading_title">
@@ -183,14 +183,22 @@ endwhile
 	   	 </div>
 	     <input type="button" class="enigma_send_button" value="报名"
 	     	onclick="submitForm()"></input>
+	     <input style="display: none" type='button' id='wechat' class="enigma_send_button"  onmouseover='showCode()' onmouseout="showCode()"
+		      value='分享到微信'
+	    	/>	    
+		
 	  </div>
+	  <div id='qrCode' style='display: none'>
+	  	<h4>微信“扫一扫”，网页打开后即可分享</h4>
+	  	<p><img src="/wordpress/wp-content/uploads/2014/12/qrcode.png" alt="Movie2.0"></p>
+	  </div>	 
  </div>
 </form>
 </DIV>
  </div>
 
 <div class="enigma_callout_area">
-	<div class="container" id="<?php echo esc_attr($wl_theme_options['register_tag']); ?>">
+	<div class="container" >
 		<div class="row">
 		<?php if($wl_theme_options['fc_title'] !='') { ?>
 			<div class="col-md-9">

@@ -51,7 +51,7 @@ function show_registers(){
 }
 
 function add_register_page(){
-	add_menu_page('Members','报名参会人员','manage_options','members','show_registers','',5);
+	add_menu_page('Members','报名参会人员','manage_options','members','show_registers','');
 }
 add_action('admin_menu','add_register_page'); //add this funciton to admin menu 
 

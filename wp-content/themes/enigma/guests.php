@@ -10,7 +10,7 @@ function dispaly_guests(){
 	<head>
 		<link rel="stylesheet" id="bootstrap-css" href="/wordpress/wp-content/themes/enigma/css/bootstrap.css?ver=4.0"
 	 type="text/css" media="all">
-		<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/scroll.js"></script>
+		<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/admin.js"></script>
 		<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/bootstrap.min.js?ver=4.0"></script>
 	</head>
 	<body>
@@ -52,7 +52,7 @@ function dispaly_guests(){
 			echo "<td>".$row->email."</td>";
 			echo "<td colspan='3'>".$row->description."</td>";
 			echo "<td><a href='/wordpress/wp-admin/admin.php?page=guest-update&id=".$row->id."'>编辑</a></td>";
-			echo "<td><a class='del_guest' id=\"$row->id\">删除</a></td></tr>";
+			echo "<td><a class='del_guest' id=\"$row->id\" name=\"$row->photo\">删除</a></td></tr>";
 			$row = next($result);
 		}
 		?>
@@ -65,7 +65,7 @@ function dispaly_guests(){
 } 
 
 function add_guests_page(){
-	add_menu_page('Guests','嘉宾列表','manage_options','guests','dispaly_guests','',4);
+	add_menu_page('Guests','嘉宾列表','manage_options','guests','dispaly_guests','');
 }
 add_action('admin_menu','add_guests_page');
 
@@ -77,13 +77,14 @@ function delGuest(){
 	if(!empty($_POST['id'])){
 
 		$where = array('id'=>$_POST['id']);
-		//remove unnecessary data
-		unset($_POST['action']);
-		unset($_POST['id']);
 
-		if(isset($wpdb))
+		if(isset($wpdb)){
+			//delete photo,then data in DB
+			unlink($_POST['photo']) ;
 			echo $wpdb->delete('wp_guests',$where);	//update data
-		else{
+		}else{
+			//delete photo,then data in DB
+			unlink($_POST['photo']) ;
 			$tmpdb= new wpdb(DB_USER, DB_PASSWORD, DB_NAME, DB_HOST );
 			echo $tmpdb->delete('wp_guests',$where);
 		}

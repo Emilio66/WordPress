@@ -639,3 +639,12 @@
 		color: #575757 !important;
 	}
 }
+
+
+@media only screen and (max-width:967px) and (min-width:767px)
+{
+	.navbar-default .navbar-nav > li > a {
+	width: 100%;
+	font-size:14px;	
+}
+}

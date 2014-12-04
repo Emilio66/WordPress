@@ -30,7 +30,8 @@ function display_activity_page(){
 <link rel="stylesheet" href="/wordpress/wp-content/themes/enigma/css/themes/default.time.css" id="theme_time">
 
 <script src="/wordpress/wp-content/themes/enigma/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/scroll.js"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/date_choose.js"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/admin.js"></script>
 <script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/bootstrap.min.js?ver=4.0"></script>
 
 <DIV class="container" style="margin-top: 10px;margin-left:50px">
@@ -120,7 +121,7 @@ function display_activity_page(){
 
 function add_activity_page(){
 	//link this page to menu buttton
-	add_menu_page('Activity','大会安排','manage_options','activity','display_activity_page','',3);
+	add_menu_page('Activity','大会安排','manage_options','activity','display_activity_page','');
 }
 
 add_action('admin_menu','add_activity_page');

@@ -33,8 +33,17 @@ function wps_admin_bar() {
 	$wp_admin_bar->remove_menu ( 'support-forums' );
 	$wp_admin_bar->remove_menu ( 'feedback' );
 	$wp_admin_bar->remove_menu ( 'view-site' );
+	
 }
 add_action ( 'wp_before_admin_bar_render', 'wps_admin_bar' );
+
+function remove_my_menu(){
+	remove_menu_page( 'plugins.php' );                //插件页面
+	remove_menu_page( 'tools.php' );                  //工具页面
+	remove_menu_page( 'update-core.php');			 //update
+}
+
+add_action('admin_menu','remove_my_menu');
 
 //remove comments style
 remove_action ( 'wp_head', 'feed_links', 2 );
@@ -133,7 +142,7 @@ function weblizar_default_settings() {
 	$zunhuisuo	="/WordPress/wp-content/uploads/2014/11/8.png";
 	$hongtou	="/WordPress/wp-content/uploads/2014/11/9.png";
 	
-	$place		="/WordPress/wp-content/uploads/2014/11/place.png";
+	//$place		="/WordPress/wp-content/uploads/2014/11/place.png";
 	
 	$wl_theme_options = array (
 			
@@ -194,7 +203,7 @@ function weblizar_default_settings() {
 			
 			'service_3_title' => "联系我们",
 			'service_3_icons' => "fa fa-phone",
-			'service_3_text' => "企业邮箱：movie20@pfeng.com.cn &br;企业QQ号： 3160129549 &br;微信公众号： Movie20 &br;公司电话： 010—58612562",
+			'service_3_text' => "企业邮箱：movie20@pfeng.com.cn<br/>企业QQ号： 3160129549<br/>微信公众号： Movie20<br/>公司电话： 010—58612562",
 			'service_3_link' => "#",
 			
 			// Portfolio Settings:
@@ -232,7 +241,7 @@ function weblizar_default_settings() {
 			'zunhuisuo'=>$zunhuisuo,
 			'hongtou'=>$hongtou,
 			
-			'place' =>$place
+			//'place' =>$place
 	)
 	;
 	return apply_filters ( 'enigma_options', $wl_theme_options );

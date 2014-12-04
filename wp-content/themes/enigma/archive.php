@@ -9,9 +9,9 @@
 if (is_day ()) :
 				printf ( __ ( 'Daily Archives: %s', 'weblizar' ), '<span>' . get_the_date () . '</span>' );
 			 elseif (is_month ()) :
-				printf ( __ ( 'Monthly Archives: %s', 'weblizar' ), '<span>' . get_the_date ( _x ( 'F Y', 'monthly archives date format', 'weblizar' ) ) . '</span>' );
+				printf ( __ ( 'Monthly Archives: %s', 'weblizar' ), '<span>' . get_the_date ( _x ( 'F Y', '按月份分类', 'weblizar' ) ) . '</span>' );
 			 elseif (is_year ()) :
-				printf ( __ ( 'Yearly Archives: %s', 'weblizar' ), '<span>' . get_the_date ( _x ( 'Y', 'yearly archives date format', 'weblizar' ) ) . '</span>' );
+				printf ( __ ( 'Yearly Archives: %s', 'weblizar' ), '<span>' . get_the_date ( _x ( 'Y', '按年分类', 'weblizar' ) ) . '</span>' );
 			 else :
 				_e ( 'Archives', '' );
 			endif;

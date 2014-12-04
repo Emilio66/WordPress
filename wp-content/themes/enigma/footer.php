@@ -1,7 +1,8 @@
 <!-- enigma Callout Section -->
 <?php $wl_theme_options = weblizar_get_options(); ?>
 <!-- Footer Widget Secton -->
-<div class="enigma_footer_widget_area" style="text-align:center"  align="center">
+<div class="enigma_footer_widget_area" style="text-align:center"  align="center"
+ id="<?php echo esc_attr($wl_theme_options['partner_tag']); ?>">
 	<div class="container" style="margin-left:auto; margin-right:auto" align="center" >	
 		<div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1 in" style="width:120px" >
 		<table  style="border:0;">

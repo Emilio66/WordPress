@@ -20,7 +20,7 @@ function guest_add_page(){
 
 <link rel="stylesheet" id="bootstrap-css" href="/wordpress/wp-content/themes/enigma/css/bootstrap.css?ver=4.0"
 	 type="text/css" media="all">
-<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/scroll.js"></script>
+<script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/admin.js"></script>
 <script type="text/javascript" src="/wordpress/wp-content/themes/enigma/js/bootstrap.min.js?ver=4.0"></script>
 <DIV class="container" style="margin-top: 10px">
 <h3>嘉宾信息更新</h3>

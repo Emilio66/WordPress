@@ -348,8 +348,8 @@ function _wp_handle_upload(&$file, $overrides, $time, $action) {
 	
 	$filename = wp_unique_filename ( $uploads ['path'], $file ['name'], $unique_filename_callback );
 	
-	// Move the file to the uploads dir.
-	$new_file = $uploads ['path'] . "/$filename";
+	// Move the file to the uploads dir. change encoding type
+	$new_file = $uploads ['path'] . "/".iconv("UTF-8","GB2312",$filename);
 	if ('wp_handle_upload' === $action) {
 		$move_new_file = @ move_uploaded_file ( $file ['tmp_name'], $new_file );
 	} else {
@@ -394,7 +394,7 @@ function _wp_handle_upload(&$file, $overrides, $time, $action) {
 	 *        	The type of upload action. Values include 'upload' or 'sideload'.
 	 */
 	return apply_filters ( 'wp_handle_upload', array (
-			'file' => $new_file,
+			'file' =>  $uploads['path'] . "/$filename", 
 			'url' => $url,
 			'type' => $type 
 	), 'wp_handle_sideload' === $action ? 'sideload' : 'upload' );
